@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-12T05:23:18.000Z">
+<meta property="og:updated_time" content="2019-02-14T08:23:48.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hello World">
 <meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
@@ -95,11 +95,17 @@
 <p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>想要把本地的Hexo部署到GitHub上面需要几个步骤</p>
+<p>.找到<code>Hexo</code>下的<code>_config.yml</code>里的<code>post_asset_folder</code>，把这个选项从<code>false</code>改成<code>true</code>。</p>
+<p>在<code>Hexo</code>目录下打开Git Brsh，执行一个下载上传图片插件的命令<code>npm install hexo-asset-image --save</code>。</p>
+<p>_config.yml里面root: /LeetcodeTutorial/</p>
+<p>原文件的 root：/  指向的是根目录，在后面添加上 仓库名</p>
+<p>即修改为 root：/LeetcodeTutorial</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2019/02/12/hello-world/" data-id="cjs1kjre300007gs68q409avl" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2019/02/12/hello-world/" data-id="cjs4dvoab0002l9s6s5eli5fu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -150,6 +156,14 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/14/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/13/10-Regular-Expression-Matching/">10. Regular Expression Matching</a>
+          </li>
         
           <li>
             <a href="/LeetCodeTutorial/2019/02/12/test/">test</a>
