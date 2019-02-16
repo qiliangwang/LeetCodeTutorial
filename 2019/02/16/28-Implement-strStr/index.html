@@ -5,19 +5,19 @@
   
 
   
-  <title>9 Palindrome Number | LeetCode</title>
+  <title>28 Implement strStr() | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Palindrome NumberDetermine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: 12Input: 121Output: true Example 2: 123Input: -121Outpu">
+  <meta name="description" content="Implement strStr()Implement strStr(). Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. Example 1: 12Input: haystack = &amp;quot;hello&amp;quot;, needle">
 <meta property="og:type" content="article">
-<meta property="og:title" content="9 Palindrome Number">
-<meta property="og:url" content="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/index.html">
+<meta property="og:title" content="28 Implement strStr()">
+<meta property="og:url" content="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Palindrome NumberDetermine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: 12Input: 121Output: true Example 2: 123Input: -121Outpu">
+<meta property="og:description" content="Implement strStr()Implement strStr(). Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. Example 1: 12Input: haystack = &amp;quot;hello&amp;quot;, needle">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:32:22.000Z">
+<meta property="og:updated_time" content="2019-02-16T09:47:24.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="9 Palindrome Number">
-<meta name="twitter:description" content="Palindrome NumberDetermine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: 12Input: 121Output: true Example 2: 123Input: -121Outpu">
+<meta name="twitter:title" content="28 Implement strStr()">
+<meta name="twitter:description" content="Implement strStr()Implement strStr(). Return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack. Example 1: 12Input: haystack = &amp;quot;hello&amp;quot;, needle">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -64,10 +64,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-9-Palindrome-Number" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-28-Implement-strStr" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/LeetCodeTutorial/2019/02/16/9-Palindrome-Number/" class="article-date">
-  <time datetime="2019-02-16T08:31:58.000Z" itemprop="datePublished">2019-02-16</time>
+    <a href="/LeetCodeTutorial/2019/02/16/28-Implement-strStr/" class="article-date">
+  <time datetime="2019-02-16T09:43:48.000Z" itemprop="datePublished">2019-02-16</time>
 </a>
     
   </div>
@@ -78,7 +78,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      9 Palindrome Number
+      28 Implement strStr()
     </h1>
   
 
@@ -86,20 +86,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Palindrome-Number"><a href="#Palindrome-Number" class="headerlink" title="Palindrome Number"></a>Palindrome Number</h2><p>Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.</p>
+        <h2 id="Implement-strStr"><a href="#Implement-strStr" class="headerlink" title="Implement strStr()"></a>Implement strStr()</h2><p>Implement <a href="http://www.cplusplus.com/reference/cstring/strstr/" target="_blank" rel="noopener">strStr()</a>.</p>
+<p>Return the index of the first occurrence of needle in haystack, or <strong>-1</strong> if needle is not part of haystack.</p>
 <p><strong>Example 1:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 121</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: haystack = &quot;hello&quot;, needle = &quot;ll&quot;</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: -121</span><br><span class="line">Output: false</span><br><span class="line">Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.</span><br></pre></td></tr></table></figure>
-<p><strong>Example 3:</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 10</span><br><span class="line">Output: false</span><br><span class="line">Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</span><br></pre></td></tr></table></figure>
-<p><strong>Follow up:</strong></p>
-<p>Coud you solve it without converting the integer to a string?</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: haystack = &quot;aaaaa&quot;, needle = &quot;bba&quot;</span><br><span class="line">Output: -1</span><br></pre></td></tr></table></figure>
+<p><strong>Clarification:</strong></p>
+<p>What should we return when <code>needle</code> is an empty string? This is a great question to ask during an interview.</p>
+<p>For the purpose of this problem, we will return 0 when <code>needle</code> is an empty string. This is consistent to C’s <a href="http://www.cplusplus.com/reference/cstring/strstr/" target="_blank" rel="noopener">strstr()</a> and Java’s <a href="https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#indexOf(java.lang.String" target="_blank" rel="noopener">indexOf()</a>).</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/" data-id="cjs7aufaq000y7as6t90tzx3j" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/" data-id="cjs7aufah000o7as6oujic3tq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -108,19 +108,10 @@
     
 <nav id="article-nav">
   
-    <a href="/LeetCodeTutorial/2019/02/16/11-Container-With-Most-Water/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          11 Container With Most Water
-        
-      </div>
-    </a>
   
-  
-    <a href="/LeetCodeTutorial/2019/02/16/8-String-to-Integer-atoi/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/LeetCodeTutorial/2019/02/16/27-Remove-Element/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">8 String to Integer (atoi)</div>
+      <div class="article-nav-title">27 Remove Element</div>
     </a>
   
 </nav>
