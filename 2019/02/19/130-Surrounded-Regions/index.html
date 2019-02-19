@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>130 Surrounded Regions | LeetCode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s in that surro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="130 Surrounded Regions">
+<meta property="og:url" content="https://vaderwang.github.io/2019/02/19/130-Surrounded-Regions/index.html">
+<meta property="og:site_name" content="LeetCode">
+<meta property="og:description" content="Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s in that surro">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-19T05:03:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="130 Surrounded Regions">
+<meta name="twitter:description" content="Given a 2D board containing &amp;#39;X&amp;#39; and &amp;#39;O&amp;#39; (the letter O), capture all regions surrounded by &amp;#39;X&amp;#39;. A region is captured by flipping all &amp;#39;O&amp;#39;s into &amp;#39;X&amp;#39;s in that surro">
+  
+    <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/LeetCodeTutorial/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/LeetCodeTutorial/" id="logo">LeetCode</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/">Home</a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/LeetCodeTutorial/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://vaderwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-130-Surrounded-Regions" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/130-Surrounded-Regions/" class="article-date">
+  <time datetime="2019-02-19T05:03:39.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      130 Surrounded Regions
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given a 2D board containing <code>&#39;X&#39;</code> and <code>&#39;O&#39;</code> (<strong>the letter O</strong>), capture all regions surrounded by <code>&#39;X&#39;</code>.</p>
+<p>A region is captured by flipping all <code>&#39;O&#39;</code>s into <code>&#39;X&#39;</code>s in that surrounded region.</p>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X X X X</span><br><span class="line">X O O X</span><br><span class="line">X X O X</span><br><span class="line">X O X X</span><br></pre></td></tr></table></figure>
+<p>After running your function, the board should be:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X X X X</span><br><span class="line">X O X X</span><br></pre></td></tr></table></figure>
+<p><strong>Explanation:</strong></p>
+<p>Surrounded regions shouldn’t be on the border, which means that any <code>&#39;O&#39;</code> on the border of the board are not flipped to <code>&#39;X&#39;</code>. Any <code>&#39;O&#39;</code> that is not on the border and it is not connected to an <code>&#39;O&#39;</code> on the border will be flipped to <code>&#39;X&#39;</code>. Two cells are connected if they are adjacent cells connected horizontally or vertically.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/130-Surrounded-Regions/" data-id="cjsbc5ouc000zwas6k5w5vvr1" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/LeetCodeTutorial/2019/02/19/131-Palindrome-Partitioning/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          131 Palindrome Partitioning
+        
+      </div>
+    </a>
+  
+  
+    <a href="/LeetCodeTutorial/2019/02/19/129-Sum-Root-to-Leaf-Numbers/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">129 Sum Root to Leaf Numbers</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/">236 Lowest Common Ancestor of a Binary Tree</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/">235 Lowest Common Ancestor of a Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/230-Kth-Smallest-Element-in-a-BST/">230 Kth Smallest Element in a BST</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Vader Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/LeetCodeTutorial/" class="mobile-nav-link">Home</a>
+  
+    <a href="/LeetCodeTutorial/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/LeetCodeTutorial/fancybox/jquery.fancybox.css">
+  <script src="/LeetCodeTutorial/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/LeetCodeTutorial/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

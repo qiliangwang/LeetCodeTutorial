@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>133 Clone Graph | LeetCode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Given the head of a graph, return a deep copy (clone) of the graph. Each node in the graph contains a label (int) and a list (List[UndirectedGraphNode]) of its neighbors. There is an edge between the">
+<meta property="og:type" content="article">
+<meta property="og:title" content="133 Clone Graph">
+<meta property="og:url" content="https://vaderwang.github.io/2019/02/19/133-Clone-Graph/index.html">
+<meta property="og:site_name" content="LeetCode">
+<meta property="og:description" content="Given the head of a graph, return a deep copy (clone) of the graph. Each node in the graph contains a label (int) and a list (List[UndirectedGraphNode]) of its neighbors. There is an edge between the">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-02-19T05:16:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="133 Clone Graph">
+<meta name="twitter:description" content="Given the head of a graph, return a deep copy (clone) of the graph. Each node in the graph contains a label (int) and a list (List[UndirectedGraphNode]) of its neighbors. There is an edge between the">
+  
+    <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/LeetCodeTutorial/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/LeetCodeTutorial/" id="logo">LeetCode</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/">Home</a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/LeetCodeTutorial/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://vaderwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-133-Clone-Graph" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/133-Clone-Graph/" class="article-date">
+  <time datetime="2019-02-19T05:09:59.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      133 Clone Graph
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given the head of a graph, return a deep copy (clone) of the graph. Each node in the graph contains a <code>label</code> (<code>int</code>) and a list (<code>List[UndirectedGraphNode]</code>) of its <code>neighbors</code>. There is an edge between the given node and each of the nodes in its neighbors.</p>
+<p><strong>OJ’s undirected graph serialization (so you can understand error output):</strong></p>
+<p>Nodes are labeled uniquely.</p>
+<p>We use <code>#</code> as a separator for each node, and <code>,</code> as a separator for node label and each neighbor of the node.</p>
+<p>As an example, consider the serialized graph <code>{0,1,2#1,2#2,2}</code>.</p>
+<p>The graph has a total of three nodes, and therefore contains three parts as separated by <code>#</code>.</p>
+<ol>
+<li><p>First node is labeled as <code>0</code>. Connect node <code>0</code> to both nodes <code>1</code> and <code>2</code>.</p>
+</li>
+<li><p>Second node is labeled as <code>1</code>. Connect node <code>1</code> to node <code>2</code>.</p>
+</li>
+<li><p>Third node is labeled as <code>2</code>. Connect node <code>2</code> to node <code>2</code> (itself), thus forming a self-cycle.</p>
+</li>
+</ol>
+<p>Visually, the graph looks like the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">   1</span><br><span class="line">  / \</span><br><span class="line"> /   \</span><br><span class="line">0 --- 2</span><br><span class="line">     / \</span><br><span class="line">     \_/</span><br></pre></td></tr></table></figure>
+<p><strong>Note</strong>: The information about the tree serialization is only meant so that you can understand error output if you get a wrong answer. You don’t need to understand the serialization to solve the problem.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/133-Clone-Graph/" data-id="cjsbc5oud0011was6s36dgiyb" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/LeetCodeTutorial/2019/02/19/134-Gas-Station/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          134 Gas Station
+        
+      </div>
+    </a>
+  
+  
+    <a href="/LeetCodeTutorial/2019/02/19/132-Palindrome-Partitioning-II/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">132 Palindrome Partitioning II</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/">236 Lowest Common Ancestor of a Binary Tree</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/">235 Lowest Common Ancestor of a Binary Search Tree</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/19/230-Kth-Smallest-Element-in-a-BST/">230 Kth Smallest Element in a BST</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Vader Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/LeetCodeTutorial/" class="mobile-nav-link">Home</a>
+  
+    <a href="/LeetCodeTutorial/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/LeetCodeTutorial/fancybox/jquery.fancybox.css">
+  <script src="/LeetCodeTutorial/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/LeetCodeTutorial/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
