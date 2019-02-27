@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:02:28.000Z">
+<meta property="og:updated_time" content="2019-02-27T04:20:58.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="1 Two Sum">
 <meta name="twitter:description" content="Two SumGiven an array of integers, return indices of the two numbers such that they add up to a specific target. You may assume that each input would have exactly one solution, and you may not use the">
@@ -90,10 +90,12 @@
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em>element twice.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> answer = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> (hashMap.containsKey(answer))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;hashMap.get(answer), i&#125;;</span><br><span class="line">            hashMap.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/1-Two-Sum/" data-id="cjsco47nj0000tws6imoyc1i3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/1-Two-Sum/" data-id="cjsdy9u660000gks6px33xuni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -159,15 +161,15 @@
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/185-Department-Top-Three-Salaries/">185 Department Top Three Salaries</a>
+            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/184-Department-Highest-Salary/">184 Department Highest Salary</a>
+            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/183-Customers-Who-Never-Order/">183 Customers Who Never Order</a>
+            <a href="/LeetCodeTutorial/2019/02/20/198-House-Robber/">198 House Robber</a>
           </li>
         
       </ul>

@@ -103,7 +103,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/12/hello-world/" data-id="cjsco47qv0053tws6vjr3qkqp" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/12/hello-world/" data-id="cjsdy9u9r005hgks6r8zepy0s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,10 +139,12 @@
 <p>You may assume that each input would have <strong>exactly</strong> one solution, and you may not use the <em>same</em>element twice.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [2, 7, 11, 15], target = 9,</span><br><span class="line"></span><br><span class="line">Because nums[0] + nums[1] = 2 + 7 = 9,</span><br><span class="line">return [0, 1].</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">     <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        HashMap&lt;Integer, Integer&gt; hashMap = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> answer = target - nums[i];</span><br><span class="line">            <span class="keyword">if</span> (hashMap.containsKey(answer))</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;hashMap.get(answer), i&#125;;</span><br><span class="line">            hashMap.put(nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;&#125;;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/1-Two-Sum/" data-id="cjsco47nj0000tws6imoyc1i3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/1-Two-Sum/" data-id="cjsdy9u660000gks6px33xuni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,10 +180,12 @@
 <p>You may assume the two numbers do not contain any leading zero, except the number 0 itself.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: (2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">Output: 7 -&gt; 0 -&gt; 8</span><br><span class="line">Explanation: 342 + 465 = 807.</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ListNode</span> </span>&#123;</span><br><span class="line">     <span class="keyword">int</span> val;</span><br><span class="line">     ListNode next;</span><br><span class="line">     ListNode(<span class="keyword">int</span> x) &#123; val = x; &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode itr = dummy;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> sum = (l1 == <span class="keyword">null</span> ? <span class="number">0</span> : l1.val) + (l2 == <span class="keyword">null</span> ? <span class="number">0</span> : l2.val) + carry;</span><br><span class="line">            carry = sum / <span class="number">10</span>;</span><br><span class="line">            itr.next = <span class="keyword">new</span> ListNode(sum % <span class="number">10</span>);</span><br><span class="line">            </span><br><span class="line">            itr = itr.next;</span><br><span class="line">            <span class="keyword">if</span> (l1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/2-Add-Two-Numbers/" data-id="cjsco47pc002itws6l5zcnaqh" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/2-Add-Two-Numbers/" data-id="cjsdy9u88002vgks683qfdgrv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -220,10 +224,13 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;bbbbb&quot;</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: The answer is &quot;b&quot;, with the length of 1.</span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;pwwkew&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;wke&quot;, with the length of 3. </span><br><span class="line">             Note that the answer must be a substring, &quot;pwke&quot; is a subsequence and not a substring.</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span>[] freq = <span class="keyword">new</span> <span class="keyword">char</span>[<span class="number">256</span>];</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>, right = <span class="number">0</span>, res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (left &lt; s.length()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (right &lt; s.length() &amp;&amp; freq[s.charAt(right)] == <span class="number">0</span>) &#123;</span><br><span class="line">                freq[s.charAt(right++)] ++;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                freq[s.charAt(left++)] --;</span><br><span class="line">            &#125;</span><br><span class="line">            res = Math.max(res, right - left);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s == <span class="keyword">null</span> || s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        HashSet&lt;Character&gt; set = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (set.contains(s.charAt(i))) &#123;</span><br><span class="line">                set.remove(s.charAt(j++));</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                set.add(s.charAt(i));</span><br><span class="line">                res = Math.max(res, set.size());</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/3-Longest-Substring-Without-Repeating-Characters/" data-id="cjsco47pm002xtws66ymzj6k4" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/3-Longest-Substring-Without-Repeating-Characters/" data-id="cjsdy9u8i003bgks6uw041teq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -262,10 +269,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 3]</span><br><span class="line">nums2 = [2]</span><br><span class="line"></span><br><span class="line">The median is 2.0</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">nums1 = [1, 2]</span><br><span class="line">nums2 = [3, 4]</span><br><span class="line"></span><br><span class="line">The median is (2 + 3)/2 = 2.5</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">findMedianSortedArrays</span><span class="params">(<span class="keyword">int</span>[] numbers1, <span class="keyword">int</span>[] numbers2)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// make sure numbers1 &lt; numbers2</span></span><br><span class="line">        <span class="keyword">if</span> (numbers1.length &gt; numbers2.length) &#123;</span><br><span class="line">            <span class="keyword">return</span> findMedianSortedArrays(numbers2, numbers1);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> length = numbers1.length +  numbers2.length;</span><br><span class="line">        <span class="keyword">int</span> cut1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> cut2 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> right = numbers1.length;</span><br><span class="line">        <span class="keyword">while</span> (cut1 &lt;= numbers1.length) &#123;</span><br><span class="line">            <span class="comment">//binary search</span></span><br><span class="line">            cut1 = left +  (right - left) / <span class="number">2</span>;</span><br><span class="line">            cut2 = length / <span class="number">2</span> - cut1;</span><br><span class="line">            <span class="keyword">double</span> L1 = (cut1 == <span class="number">0</span>) ? Integer.MIN_VALUE : numbers1[cut1 - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">double</span> L2 = (cut2 == <span class="number">0</span>) ? Integer.MIN_VALUE : numbers2[cut2 - <span class="number">1</span>];</span><br><span class="line">            <span class="keyword">double</span> R1 = (cut1 == numbers1.length) ? Integer.MAX_VALUE : numbers1[cut1];</span><br><span class="line">            <span class="keyword">double</span> R2 = (cut2 == numbers2.length) ? Integer.MAX_VALUE : numbers2[cut2];</span><br><span class="line">            <span class="keyword">if</span> (L1 &gt; R2) &#123;</span><br><span class="line">                <span class="comment">//move left</span></span><br><span class="line">                right = cut1 - <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> <span class="keyword">if</span> (L2 &gt; R1) &#123;</span><br><span class="line">                <span class="comment">//move right</span></span><br><span class="line">                left = cut1 + <span class="number">1</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">if</span> (length % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">                    L1 = (L1 &gt; L2) ? L1 : L2;</span><br><span class="line">                    R1 = (R1 &lt; R2) ? R1 : R2;</span><br><span class="line">                    <span class="keyword">return</span> (L1 + R1) / <span class="number">2</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">                    <span class="keyword">return</span> (R1 &lt; R2) ? R1 : R2;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/4-Median-of-Two-Sorted-Arrays/" data-id="cjsco47pt0039tws6nxn9sf6l" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/4-Median-of-Two-Sorted-Arrays/" data-id="cjsdy9u8p003ngks6kh77384s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -305,7 +314,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/5-Longest-Palindromic-Substring/" data-id="cjsco47pz003ktws6lm4o3wpa" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/5-Longest-Palindromic-Substring/" data-id="cjsdy9u8w003ygks620tns5gc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -349,7 +358,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/6-ZigZag-Conversion/" data-id="cjsco47q8003vtws6bbzg4q6g" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/6-ZigZag-Conversion/" data-id="cjsdy9u910049gks68dxnclck" class="article-share-link">Share</a>
       
       
     </footer>
@@ -391,7 +400,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/7-Reverse-Integer/" data-id="cjsco47qd0046tws6mm80kcgb" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/7-Reverse-Integer/" data-id="cjsdy9u99004kgks651a1js57" class="article-share-link">Share</a>
       
       
     </footer>
@@ -446,7 +455,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/8-String-to-Integer-atoi/" data-id="cjsco47qi004htws6zwb9vxol" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/8-String-to-Integer-atoi/" data-id="cjsdy9u9g004vgks6b7udjzl9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -491,7 +500,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/" data-id="cjsco47qq004stws63psstme0" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/" data-id="cjsdy9u9l0056gks64lm891xz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -554,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/10-Regular-Expression-Matching/" data-id="cjsco47nn0001tws6gs2ma6wy" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/10-Regular-Expression-Matching/" data-id="cjsdy9u6a0001gks65hu2f8w5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -595,7 +604,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/11-Container-With-Most-Water/" data-id="cjsco47nz000ctws6xkw20541" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/11-Container-With-Most-Water/" data-id="cjsdy9u6n000cgks6ohyqjptb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -650,7 +659,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/12-Integer-to-Roman/" data-id="cjsco47o5000ntws6p4kvyid7" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/12-Integer-to-Roman/" data-id="cjsdy9u6v000ngks6ud3utleg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -705,7 +714,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/13-Roman-to-Integer/" data-id="cjsco47ob000ytws64df841zm" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/13-Roman-to-Integer/" data-id="cjsdy9u72000ygks6ihagl4b9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -746,7 +755,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/14-Longest-Common-Prefix/" data-id="cjsco47og0018tws66ouwqkzx" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/14-Longest-Common-Prefix/" data-id="cjsdy9u780019gks68j400016" class="article-share-link">Share</a>
       
       
     </footer>
@@ -786,7 +795,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/15-3Sum/" data-id="cjsco47on001jtws6hlygxbqr" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/15-3Sum/" data-id="cjsdy9u7e001kgks6395fzn6q" class="article-share-link">Share</a>
       
       
     </footer>
@@ -824,7 +833,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/16-3Sum-Closest/" data-id="cjsco47os001rtws6p45fz8dm" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/16-3Sum-Closest/" data-id="cjsdy9u7i001rgks6793s9twi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -867,7 +876,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/17-Letter-Combinations-of-a-Phone-Number/" data-id="cjsco47oz0020tws6mr6djan5" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/17-Letter-Combinations-of-a-Phone-Number/" data-id="cjsdy9u7p0020gks61q35iltb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -907,7 +916,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/18-4Sum/" data-id="cjsco47p5002atws6mrui100c" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/18-4Sum/" data-id="cjsdy9u7v002agks6p8gi4fjh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -950,7 +959,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/19-Remove-Nth-Node-From-End-of-List/" data-id="cjsco47pb002htws6v1fgeypq" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/19-Remove-Nth-Node-From-End-of-List/" data-id="cjsdy9u81002kgks60dlhop32" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1002,7 +1011,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/20-Valid-Parentheses/" data-id="cjsco47pd002jtws60vjd4uy6" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/20-Valid-Parentheses/" data-id="cjsdy9u89002wgks6ojg2q6pe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1040,7 +1049,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/21-Merge-Two-Sorted-Lists/" data-id="cjsco47pd002ktws6u2cddx1x" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/21-Merge-Two-Sorted-Lists/" data-id="cjsdy9u8a002ygks6l6kthl0v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1078,7 +1087,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/22-Generate-Parentheses/" data-id="cjsco47pe002ltws6w5s2hk6c" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/22-Generate-Parentheses/" data-id="cjsdy9u8b002zgks6gd6ijrqb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1117,7 +1126,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/23-Merge-k-Sorted-Lists/" data-id="cjsco47pf002mtws69jxdh3yp" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/23-Merge-k-Sorted-Lists/" data-id="cjsdy9u8b0030gks6qzi8qk69" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1156,7 +1165,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/24-Swap-Nodes-in-Pairs/" data-id="cjsco47ph002qtws69fofm3zj" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/24-Swap-Nodes-in-Pairs/" data-id="cjsdy9u8e0034gks6m7xhchmz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1203,7 +1212,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/25-Reverse-Nodes-in-k-Group/" data-id="cjsco47pj002stws6zo9t4qb7" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/25-Reverse-Nodes-in-k-Group/" data-id="cjsdy9u8f0036gks6eyvx5tw9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1249,7 +1258,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/26-Remove-Duplicates-from-Sorted-Array/" data-id="cjsco47pk002utws6bqzqxs0d" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/26-Remove-Duplicates-from-Sorted-Array/" data-id="cjsdy9u8f0037gks6ts8hm9zy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1296,7 +1305,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjsco47pj002ttws60h5gd9ts" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjsdy9u8g0038gks623o9aoxe" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1341,7 +1350,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/" data-id="cjsco47pk002vtws658xnrlvg" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/" data-id="cjsdy9u8h0039gks6x2qw54h6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1377,7 +1386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/29-Divide-Two-Integers/" data-id="cjsco47pl002wtws68tnurb0q" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/29-Divide-Two-Integers/" data-id="cjsdy9u8h003agks606nubf9m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1417,7 +1426,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/30-Substring-with-Concatenation-of-All-Words/" data-id="cjsco47pn002ytws61qd4fenu" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/30-Substring-with-Concatenation-of-All-Words/" data-id="cjsdy9u8i003cgks6pyjt5q2n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1458,7 +1467,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/31-Next-Permutation/" data-id="cjsco47pn002ztws6eaz76abn" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/31-Next-Permutation/" data-id="cjsdy9u8j003dgks6yd5p1olp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1498,7 +1507,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/32-Longest-Valid-Parentheses/" data-id="cjsco47po0030tws6uft5fecc" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/32-Longest-Valid-Parentheses/" data-id="cjsdy9u8j003egks63wuxbbc0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1542,7 +1551,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/33-Search-in-Rotated-Sorted-Array/" data-id="cjsco47po0031tws6kqzzdizu" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/33-Search-in-Rotated-Sorted-Array/" data-id="cjsdy9u8k003fgks62rfwmtjg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1584,7 +1593,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array/" data-id="cjsco47pp0032tws6t1vpnqdl" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array/" data-id="cjsdy9u8l003ggks695ia4af6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1631,7 +1640,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/35-Search-Insert-Position/" data-id="cjsco47pq0033tws6dvixvuur" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/35-Search-Insert-Position/" data-id="cjsdy9u8l003hgks6dk5vjc3b" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1686,7 +1695,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/36-Valid-Sudoku/" data-id="cjsco47pr0035tws6ksoffn2y" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/36-Valid-Sudoku/" data-id="cjsdy9u8m003igks6xvs5yuhg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1738,7 +1747,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/37-Sudoku-Solver/" data-id="cjsco47pq0034tws647hwinzc" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/37-Sudoku-Solver/" data-id="cjsdy9u8m003jgks6hqjgn4v8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1782,7 +1791,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/38-Count-and-Say/" data-id="cjsco47ps0037tws6powouj1o" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/38-Count-and-Say/" data-id="cjsdy9u8n003kgks65iazy229" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1828,7 +1837,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/39-Combination-Sum/" data-id="cjsco47ps0038tws6w6bfxevv" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/39-Combination-Sum/" data-id="cjsdy9u8o003mgks6ho89kfrw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1874,7 +1883,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/40-Combination-Sum-II/" data-id="cjsco47pu003atws62ka0tzs3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/40-Combination-Sum-II/" data-id="cjsdy9u8r003ogks60oyjyyzs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1910,7 +1919,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/41-First-Missing-Positive/" data-id="cjsco47pu003btws69tion074" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/41-First-Missing-Positive/" data-id="cjsdy9u8s003pgks6z0qksqaa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1949,7 +1958,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/42-Trapping-Rain-Water/" data-id="cjsco47pv003ctws6ifj94gua" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/42-Trapping-Rain-Water/" data-id="cjsdy9u8s003qgks6ggox942y" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1997,7 +2006,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/43-Multiply-Strings/" data-id="cjsco47pv003dtws69hqfsjct" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/43-Multiply-Strings/" data-id="cjsdy9u8t003rgks640j3z7zy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2050,7 +2059,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/44-Wildcard-Matching/" data-id="cjsco47pw003etws6x5mj64je" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/44-Wildcard-Matching/" data-id="cjsdy9u8t003sgks6kqy80odf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2090,7 +2099,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/45-Jump-Game-II/" data-id="cjsco47px003ftws6jo587q7f" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/45-Jump-Game-II/" data-id="cjsdy9u8u003tgks670mfgxms" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2128,7 +2137,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/46-Permutations/" data-id="cjsco47px003gtws6ssfzo7bs" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/46-Permutations/" data-id="cjsdy9u8u003ugks6jb3kpouw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2166,7 +2175,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/47-Permutations-II/" data-id="cjsco47py003htws69m8hw7op" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/47-Permutations-II/" data-id="cjsdy9u8u003vgks6fjusmpit" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2209,7 +2218,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/48-Rotate-Image/" data-id="cjsco47py003itws6t9ylt65l" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/48-Rotate-Image/" data-id="cjsdy9u8v003wgks6nb5nwbom" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2253,7 +2262,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/49-Group-Anagrams/" data-id="cjsco47pz003jtws61uzdmgns" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/49-Group-Anagrams/" data-id="cjsdy9u8v003xgks6cwpwiwrl" class="article-share-link">Share</a>
       
       
     </footer>
@@ -2307,15 +2316,15 @@
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/185-Department-Top-Three-Salaries/">185 Department Top Three Salaries</a>
+            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/184-Department-Highest-Salary/">184 Department Highest Salary</a>
+            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
           <li>
-            <a href="/LeetCodeTutorial/2019/02/20/183-Customers-Who-Never-Order/">183 Customers Who Never Order</a>
+            <a href="/LeetCodeTutorial/2019/02/20/198-House-Robber/">198 House Robber</a>
           </li>
         
       </ul>
