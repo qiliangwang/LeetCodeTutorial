@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Reverse Nodes in k-GroupGiven a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:46:18.000Z">
+<meta property="og:updated_time" content="2019-03-11T12:26:07.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="25 Reverse Nodes in k-Group">
 <meta name="twitter:description" content="Reverse Nodes in k-GroupGiven a linked list, reverse the nodes of a linked list k at a time and return its modified list. k is a positive integer and is less than or equal to the length of the linked">
@@ -94,14 +94,17 @@
 <p>For <em>k</em> = 3, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>
 <p><strong>Note:</strong></p>
 <ul>
-<li>Only constant extra memory is allowed.</li>
-<li>You may not alter the values in the list’s nodes, only nodes itself may be changed.</li>
+<li><p>Only constant extra memory is allowed.</p>
+</li>
+<li><p>You may not alter the values in the list’s nodes, only nodes itself may be changed.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2></li>
 </ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseKGroup</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="keyword">null</span> &amp;&amp; count != k) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">            count ++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (count == k) &#123;</span><br><span class="line">            cur = reverseKGroup(cur, k);</span><br><span class="line">            <span class="keyword">while</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                ListNode temp = head.next;</span><br><span class="line">                head.next = cur;</span><br><span class="line">                cur = head;</span><br><span class="line">                head = temp;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">            head = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/25-Reverse-Nodes-in-k-Group/" data-id="cjt2tnfcd0036f2mvd88gzt63" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/25-Reverse-Nodes-in-k-Group/" data-id="cjt4btny80037l6mvacbyhifk" class="article-share-link">Share</a>
       
       
     </footer>

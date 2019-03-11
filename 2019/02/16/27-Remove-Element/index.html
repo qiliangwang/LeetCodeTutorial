@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Remove ElementGiven an array nums and a value val, remove all instances of that value in-place and return the new length. Do not allocate extra space for another array, you must do this by modifying t">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:47:50.000Z">
+<meta property="og:updated_time" content="2019-03-11T12:27:22.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="27 Remove Element">
 <meta name="twitter:description" content="Remove ElementGiven an array nums and a value val, remove all instances of that value in-place and return the new length. Do not allocate extra space for another array, you must do this by modifying t">
@@ -98,10 +98,12 @@
 <p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
 <p>Internally you can think of this:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums is passed in by reference. (i.e., without making a copy)</span><br><span class="line">int len = removeElement(nums, val);</span><br><span class="line"></span><br><span class="line">// any modification to nums in your function would be known by the caller.</span><br><span class="line">// using the length returned by your function, it prints the first len elements.</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeElement</span><span class="params">(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> val)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i: nums) &#123;</span><br><span class="line">            <span class="keyword">if</span> (i != val) &#123;</span><br><span class="line">                nums[result++] = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjt2tnfce0038f2mvt3uutlkd" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjt4btny80038l6mvhmlsbocu" class="article-share-link">Share</a>
       
       
     </footer>

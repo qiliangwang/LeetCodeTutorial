@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Palindrome NumberDetermine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: 12Input: 121Output: true Example 2: 123Input: -121Outpu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:32:22.000Z">
+<meta property="og:updated_time" content="2019-03-11T12:13:49.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="9 Palindrome Number">
 <meta name="twitter:description" content="Palindrome NumberDetermine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward. Example 1: 12Input: 121Output: true Example 2: 123Input: -121Outpu">
@@ -95,11 +95,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 10</span><br><span class="line">Output: false</span><br><span class="line">Explanation: Reads 01 from right to left. Therefore it is not a palindrome.</span><br></pre></td></tr></table></figure>
 <p><strong>Follow up:</strong></p>
 <p>Coud you solve it without converting the integer to a string?</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (x &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> origin = x;</span><br><span class="line">        <span class="keyword">int</span> reversed = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">            reversed = reversed * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">            x = x / <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> reversed == origin;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/" data-id="cjt2tnfdj0056f2mvsalf5448" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/9-Palindrome-Number/" data-id="cjt4btnz90056l6mvijl77280" class="article-share-link">Share</a>
       
       
     </footer>

@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Longest Common PrefixWrite a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;quot;&amp;quot;. Example 1: 12Input: [&amp;quo">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-16T08:36:29.000Z">
+<meta property="og:updated_time" content="2019-03-11T12:18:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="14 Longest Common Prefix">
 <meta name="twitter:description" content="Longest Common PrefixWrite a function to find the longest common prefix string amongst an array of strings. If there is no common prefix, return an empty string &amp;quot;&amp;quot;. Example 1: 12Input: [&amp;quo">
@@ -92,10 +92,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;flower&quot;,&quot;flow&quot;,&quot;flight&quot;]</span><br><span class="line">Output: &quot;fl&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: [&quot;dog&quot;,&quot;racecar&quot;,&quot;car&quot;]</span><br><span class="line">Output: &quot;&quot;</span><br><span class="line">Explanation: There is no common prefix among the input strings.</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestCommonPrefix</span><span class="params">(String[] strs)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (strs == <span class="keyword">null</span> || strs.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        String res = strs[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; strs.length; i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (strs[i].indexOf(res) != <span class="number">0</span>) &#123;</span><br><span class="line">                res = res.substring(<span class="number">0</span>, res.length() - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/14-Longest-Common-Prefix/" data-id="cjt2tnfb40019f2mv5tapfes3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/14-Longest-Common-Prefix/" data-id="cjt4btnx10019l6mvy3m1tj32" class="article-share-link">Share</a>
       
       
     </footer>
