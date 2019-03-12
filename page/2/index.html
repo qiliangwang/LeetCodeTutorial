@@ -62,56 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-25-Reverse-Nodes-in-k-Group" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/LeetCodeTutorial/2019/02/16/25-Reverse-Nodes-in-k-Group/" class="article-date">
-  <time datetime="2019-02-16T08:45:57.000Z" itemprop="datePublished">2019-02-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/LeetCodeTutorial/2019/02/16/25-Reverse-Nodes-in-k-Group/">25 Reverse Nodes in k-Group</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="Reverse-Nodes-in-k-Group"><a href="#Reverse-Nodes-in-k-Group" class="headerlink" title="Reverse Nodes in k-Group"></a>Reverse Nodes in k-Group</h2><p>Given a linked list, reverse the nodes of a linked list <em>k</em> at a time and return its modified list.</p>
-<p><em>k</em> is a positive integer and is less than or equal to the length of the linked list. If the number of nodes is not a multiple of <em>k</em> then left-out nodes in the end should remain as it is.</p>
-<p><strong>Example:</strong></p>
-<p>Given this linked list: <code>1-&gt;2-&gt;3-&gt;4-&gt;5</code></p>
-<p>For <em>k</em> = 2, you should return: <code>2-&gt;1-&gt;4-&gt;3-&gt;5</code></p>
-<p>For <em>k</em> = 3, you should return: <code>3-&gt;2-&gt;1-&gt;4-&gt;5</code></p>
-<p><strong>Note:</strong></p>
-<ul>
-<li><p>Only constant extra memory is allowed.</p>
-</li>
-<li><p>You may not alter the values in the list’s nodes, only nodes itself may be changed.</p>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2></li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">reverseKGroup</span><span class="params">(ListNode head, <span class="keyword">int</span> k)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line"></span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (cur != <span class="keyword">null</span> &amp;&amp; count != k) &#123;</span><br><span class="line">            cur = cur.next;</span><br><span class="line">            count ++;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (count == k) &#123;</span><br><span class="line">            cur = reverseKGroup(cur, k);</span><br><span class="line">            <span class="keyword">while</span> (count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">                ListNode temp = head.next;</span><br><span class="line">                head.next = cur;</span><br><span class="line">                cur = head;</span><br><span class="line">                head = temp;</span><br><span class="line">                count--;</span><br><span class="line">            &#125;</span><br><span class="line">            head = cur;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/25-Reverse-Nodes-in-k-Group/" data-id="cjt5ftg6z0036yomvn36lb0u2" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-26-Remove-Duplicates-from-Sorted-Array" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/LeetCodeTutorial/2019/02/16/26-Remove-Duplicates-from-Sorted-Array/" class="article-date">
@@ -150,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/26-Remove-Duplicates-from-Sorted-Array/" data-id="cjt5ftg700037yomvmh8bc8ru" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/26-Remove-Duplicates-from-Sorted-Array/" data-id="cjt5ha0qa0037atmv9mptiu6o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +149,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjt5ftg710038yomvijp53vbb" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/27-Remove-Element/" data-id="cjt5ha0qa0038atmva1hxtq8g" class="article-share-link">Share</a>
       
       
     </footer>
@@ -245,7 +195,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/" data-id="cjt5ftg710039yomvgjb6z8iv" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/28-Implement-strStr/" data-id="cjt5ha0qb0039atmvljq92zgu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -294,7 +244,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/16/29-Divide-Two-Integers/" data-id="cjt5ftg72003ayomvxzb894ef" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/16/29-Divide-Two-Integers/" data-id="cjt5ha0qb003aatmvgl0ttpwa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -336,7 +286,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/30-Substring-with-Concatenation-of-All-Words/" data-id="cjt5ftg73003cyomvj6u9do1v" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/30-Substring-with-Concatenation-of-All-Words/" data-id="cjt5ha0qc003catmvb7xvwzax" class="article-share-link">Share</a>
       
       
     </footer>
@@ -378,7 +328,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/31-Next-Permutation/" data-id="cjt5ftg73003dyomvw4vg47go" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/31-Next-Permutation/" data-id="cjt5ha0qd003datmvcmta96kw" class="article-share-link">Share</a>
       
       
     </footer>
@@ -420,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/32-Longest-Valid-Parentheses/" data-id="cjt5ftg74003eyomvte9unzim" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/32-Longest-Valid-Parentheses/" data-id="cjt5ha0qd003eatmvmnm2vewi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -467,7 +417,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/33-Search-in-Rotated-Sorted-Array/" data-id="cjt5ftg75003fyomvpxbldvok" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/33-Search-in-Rotated-Sorted-Array/" data-id="cjt5ha0qe003fatmv1ga7ti86" class="article-share-link">Share</a>
       
       
     </footer>
@@ -511,7 +461,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array/" data-id="cjt5ftg75003gyomvapdusxrd" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/34-Find-First-and-Last-Position-of-Element-in-Sorted-Array/" data-id="cjt5ha0qe003gatmvnfbaxe67" class="article-share-link">Share</a>
       
       
     </footer>
@@ -558,7 +508,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/35-Search-Insert-Position/" data-id="cjt5ftg76003hyomvpb5628k4" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/35-Search-Insert-Position/" data-id="cjt5ha0qf003hatmvqlu04go9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -614,7 +564,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/36-Valid-Sudoku/" data-id="cjt5ftg76003iyomv1bpf1fcr" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/36-Valid-Sudoku/" data-id="cjt5ha0qi003iatmv6u0ij8fi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -667,7 +617,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/37-Sudoku-Solver/" data-id="cjt5ftg77003jyomvx0xrmj31" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/37-Sudoku-Solver/" data-id="cjt5ha0qj003jatmvc51vtwp7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -713,7 +663,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/38-Count-and-Say/" data-id="cjt5ftg77003kyomvmrbwpsga" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/38-Count-and-Say/" data-id="cjt5ha0qj003katmvcpy2jg2h" class="article-share-link">Share</a>
       
       
     </footer>
@@ -759,7 +709,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/39-Combination-Sum/" data-id="cjt5ftg79003myomv8ejfuotn" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/39-Combination-Sum/" data-id="cjt5ha0qk003matmv3u3ow5p7" class="article-share-link">Share</a>
       
       
     </footer>
@@ -805,7 +755,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/40-Combination-Sum-II/" data-id="cjt5ftg7a003oyomvtv4x4284" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/40-Combination-Sum-II/" data-id="cjt5ha0ql003oatmv6pckqqmq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -851,7 +801,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/41-First-Missing-Positive/" data-id="cjt5ftg7a003pyomv0epykuu6" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/41-First-Missing-Positive/" data-id="cjt5ha0qm003patmv8f6bf5s8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -892,7 +842,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/42-Trapping-Rain-Water/" data-id="cjt5ftg7b003qyomvsfuwy0ui" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/42-Trapping-Rain-Water/" data-id="cjt5ha0qm003qatmvb6htr8uu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -941,7 +891,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/43-Multiply-Strings/" data-id="cjt5ftg7c003ryomv9a9mni7w" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/43-Multiply-Strings/" data-id="cjt5ha0qn003ratmvhb2nlzs3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -996,7 +946,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/44-Wildcard-Matching/" data-id="cjt5ftg7c003syomvujid06bt" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/44-Wildcard-Matching/" data-id="cjt5ha0qn003satmv6pfekjdo" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1036,7 +986,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/45-Jump-Game-II/" data-id="cjt5ftg7d003tyomvxlx05lta" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/45-Jump-Game-II/" data-id="cjt5ha0qo003tatmvxx9sgfrk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1076,7 +1026,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/46-Permutations/" data-id="cjt5ftg7d003uyomv521gewg2" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/46-Permutations/" data-id="cjt5ha0qo003uatmvktupx1iy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1116,7 +1066,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/47-Permutations-II/" data-id="cjt5ftg7e003vyomvzk1c1xw9" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/47-Permutations-II/" data-id="cjt5ha0qo003vatmv47vq5rlz" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1161,7 +1111,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/48-Rotate-Image/" data-id="cjt5ftg7e003wyomvjm70zw1q" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/48-Rotate-Image/" data-id="cjt5ha0qp003watmvgeirz1h5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1206,7 +1156,57 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/49-Group-Anagrams/" data-id="cjt5ftg7f003xyomvof8rvum7" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/49-Group-Anagrams/" data-id="cjt5ha0qp003xatmvvxydjm43" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-50-Pow-x-n" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/18/50-Pow-x-n/" class="article-date">
+  <time datetime="2019-02-18T04:51:38.000Z" itemprop="datePublished">2019-02-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/18/50-Pow-x-n/">50 Pow(x, n)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Pow-x-n"><a href="#Pow-x-n" class="headerlink" title="Pow(x, n)"></a>Pow(x, n)</h2><p>Implement <a href="http://www.cplusplus.com/reference/valarray/pow/" target="_blank" rel="noopener">pow(<em>x</em>, <em>n</em>)</a>, which calculates <em>x</em> raised to the power <em>n</em> (xn).</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.00000, 10</span><br><span class="line">Output: 1024.00000</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.10000, 3</span><br><span class="line">Output: 9.26100</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 2.00000, -2</span><br><span class="line">Output: 0.25000</span><br><span class="line">Explanation: 2-2 = 1/22 = 1/4 = 0.25</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>-100.0 &lt; <em>x</em> &lt; 100.0</li>
+<li><em>n</em> is a 32-bit signed integer, within the range [−231, 231 − 1]</li>
+</ul>
+<p>solution</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">   <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">myPow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n &lt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span> / pow(x, -n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> pow(x, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">double</span> <span class="title">pow</span><span class="params">(<span class="keyword">double</span> x, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1.0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">double</span> y = pow(x, n/<span class="number">2</span>);</span><br><span class="line">        <span class="keyword">if</span> (n%<span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> y * y;</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> y * y * x;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/18/50-Pow-x-n/" data-id="cjt5ha0qq003zatmvu10s8oui" class="article-share-link">Share</a>
       
       
     </footer>
@@ -1239,7 +1239,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
     </div>
   </div>
 
@@ -1250,6 +1250,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
+          </li>
         
           <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
@@ -1265,10 +1269,6 @@
         
           <li>
             <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/198-House-Robber/">198 House Robber</a>
           </li>
         
       </ul>
