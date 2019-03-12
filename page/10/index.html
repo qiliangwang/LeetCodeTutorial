@@ -62,49 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-184-Department-Highest-Salary" class="article article-type-post" itemscope="" itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/LeetCodeTutorial/2019/02/20/184-Department-Highest-Salary/" class="article-date">
-  <time datetime="2019-02-20T03:05:03.000Z" itemprop="datePublished">2019-02-20</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/184-Department-Highest-Salary/">184 Department Highest Salary</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>The <code>Employee</code> table holds all employees. Every employee has an Id, a salary, and there is also a column for the department Id.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+--------+--------------+</span><br><span class="line">| Id | Name  | Salary | DepartmentId |</span><br><span class="line">+----+-------+--------+--------------+</span><br><span class="line">| 1  | Joe   | 70000  | 1            |</span><br><span class="line">| 2  | Henry | 80000  | 2            |</span><br><span class="line">| 3  | Sam   | 60000  | 2            |</span><br><span class="line">| 4  | Max   | 90000  | 1            |</span><br><span class="line">+----+-------+--------+--------------+</span><br></pre></td></tr></table></figure>
-<p>The <code>Department</code> table holds all departments of the company.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+----------+</span><br><span class="line">| Id | Name     |</span><br><span class="line">+----+----------+</span><br><span class="line">| 1  | IT       |</span><br><span class="line">| 2  | Sales    |</span><br><span class="line">+----+----------+</span><br></pre></td></tr></table></figure>
-<p>Write a SQL query to find employees who have the highest salary in each of the departments. For the above tables, Max has the highest salary in the IT department and Henry has the highest salary in the Sales department.</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+------------+----------+--------+</span><br><span class="line">| Department | Employee | Salary |</span><br><span class="line">+------------+----------+--------+</span><br><span class="line">| IT         | Max      | 90000  |</span><br><span class="line">| Sales      | Henry    | 80000  |</span><br><span class="line">+------------+----------+--------+</span><br></pre></td></tr></table></figure>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Department.Name <span class="keyword">as</span> Department, Employee.Name <span class="keyword">as</span> Employee, Employee.Salary </span><br><span class="line"><span class="keyword">from</span> Employee <span class="keyword">join</span> Department <span class="keyword">on</span> Employee.DepartmentId = Department.Id</span><br><span class="line"><span class="keyword">where</span> (Employee.DepartmentId, Salary) </span><br><span class="line">        <span class="keyword">in</span> (<span class="keyword">select</span> DepartmentId, <span class="keyword">max</span>(Salary) <span class="keyword">as</span> Salary </span><br><span class="line">            <span class="keyword">from</span> Employee </span><br><span class="line">            <span class="keyword">group</span> <span class="keyword">by</span> DepartmentId</span><br><span class="line">           );</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/184-Department-Highest-Salary/" data-id="cjt4bv5yn002fmjmvu93avbfa" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-185-Department-Top-Three-Salaries" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/LeetCodeTutorial/2019/02/20/185-Department-Top-Three-Salaries/" class="article-date">
@@ -138,7 +95,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/185-Department-Top-Three-Salaries/" data-id="cjt4bv5yo002gmjmvb3zqfue3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/185-Department-Top-Three-Salaries/" data-id="cjt5j23wo002gjjmvsngegs77" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +134,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/187-Repeated-DNA-Sequences/" data-id="cjt4bv5yo002hmjmvv0ye3iy8" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/187-Repeated-DNA-Sequences/" data-id="cjt5j23wp002hjjmvioyk7qvg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,7 +176,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/188-Best-Time-to-Buy-and-Sell-Stock-IV/" data-id="cjt4bv5yp002imjmvp50byi3s" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/188-Best-Time-to-Buy-and-Sell-Stock-IV/" data-id="cjt5j23wp002ijjmvaaa6dyni" class="article-share-link">Share</a>
       
       
     </footer>
@@ -265,7 +222,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/189-Rotate-Array/" data-id="cjt4bv5yp002jmjmvs723ezg4" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/189-Rotate-Array/" data-id="cjt5j23wq002jjjmvqx3nsocp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -313,7 +270,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/190-Reverse-Bits/" data-id="cjt4bv5yr002lmjmvl5cabf5l" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/190-Reverse-Bits/" data-id="cjt5j23ws002ljjmvtxyjnuo0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -363,7 +320,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/191-Number-of-1-Bits/" data-id="cjt4bv5yr002mmjmvge4wib5h" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/191-Number-of-1-Bits/" data-id="cjt5j23ws002mjjmvxvfvwcss" class="article-share-link">Share</a>
       
       
     </footer>
@@ -416,7 +373,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/192-Word-Frequency/" data-id="cjt4bv5ys002nmjmvaqtsspb0" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/192-Word-Frequency/" data-id="cjt5j23wt002njjmvkhmkfd9z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -459,7 +416,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/193-Valid-Phone-Numbers/" data-id="cjt4bv5yt002omjmvgfzwi8j1" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/193-Valid-Phone-Numbers/" data-id="cjt5j23wu002ojjmvtkpudfcp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -501,7 +458,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/194-Transpose-File/" data-id="cjt4bv5yt002pmjmv3598g4ba" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/194-Transpose-File/" data-id="cjt5j23wu002pjjmvahcrd76n" class="article-share-link">Share</a>
       
       
     </footer>
@@ -548,7 +505,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/195-Tenth-Line/" data-id="cjt4bv5yu002qmjmvhvn599v9" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/195-Tenth-Line/" data-id="cjt5j23wv002qjjmvlits2r8v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -590,7 +547,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/196-Delete-Duplicate-Emails/" data-id="cjt4bv5yv002rmjmvc09vwssk" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/196-Delete-Duplicate-Emails/" data-id="cjt5j23ww002rjjmv5rdz9kr1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -629,7 +586,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/197-Rising-Temperature/" data-id="cjt4bv5yv002smjmv2lm6j03y" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/197-Rising-Temperature/" data-id="cjt5j23ww002sjjmv7opxgrjg" class="article-share-link">Share</a>
       
       
     </footer>
@@ -670,7 +627,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/198-House-Robber/" data-id="cjt4bv5yw002tmjmv4m7rpt70" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/198-House-Robber/" data-id="cjt5j23wx002tjjmvny25wsxq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -708,7 +665,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/199-Binary-Tree-Right-Side-View/" data-id="cjt4bv5yw002umjmvd03aa00h" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/199-Binary-Tree-Right-Side-View/" data-id="cjt5j23wx002ujjmvw0hsdxkr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -748,7 +705,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/200-Number-of-Islands/" data-id="cjt4bv5yz002xmjmvufy30g8n" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/200-Number-of-Islands/" data-id="cjt5j23wz002wjjmv6hl8a3pb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -791,7 +748,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/242-Valid-Anagram/" data-id="cjt4bv5z40035mjmv7ohzk0nl" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/242-Valid-Anagram/" data-id="cjt5j23x40034jjmvn2xhojxi" class="article-share-link">Share</a>
       
       
     </footer>
@@ -831,7 +788,58 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/21/387-First-Unique-Character-in-a-String/" data-id="cjt4bv5zd003lmjmvac3gez84" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/21/387-First-Unique-Character-in-a-String/" data-id="cjt5j23xh003ljjmvw52w21ao" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hello-world" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/03/21/hello-world/" class="article-date">
+  <time datetime="2019-03-21T08:12:15.000Z" itemprop="datePublished">2019-03-21</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>想要把本地的Hexo部署到GitHub上面需要几个步骤</p>
+<p>.找到<code>Hexo</code>下的<code>_config.yml</code>里的<code>post_asset_folder</code>，把这个选项从<code>false</code>改成<code>true</code>。</p>
+<p>在<code>Hexo</code>目录下打开Git Brsh，执行一个下载上传图片插件的命令<code>npm install hexo-asset-image --save</code>。</p>
+<p>_config.yml里面root: /LeetcodeTutorial/</p>
+<p>原文件的 root：/  指向的是根目录，在后面添加上 仓库名</p>
+<p>即修改为 root：/LeetcodeTutorial</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/03/21/hello-world/" data-id="cjt5j23yh005hjjmv5exask7z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -864,7 +872,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
     </div>
   </div>
 
@@ -875,6 +883,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
+          </li>
         
           <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
@@ -890,10 +902,6 @@
         
           <li>
             <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/198-House-Robber/">198 House Robber</a>
           </li>
         
       </ul>
