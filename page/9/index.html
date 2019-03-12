@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>LeetCode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="LeetCode">
+<meta property="og:url" content="https://vaderwang.github.io/page/9/index.html">
+<meta property="og:site_name" content="LeetCode">
+<meta property="og:locale" content="default">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="LeetCode">
+  
+    <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/LeetCodeTutorial/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/LeetCodeTutorial/" id="logo">LeetCode</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/">Home</a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/LeetCodeTutorial/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://vaderwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main">
+  
+    <article id="post-166-Fraction-to-Recurring-Decimal" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/166-Fraction-to-Recurring-Decimal/" class="article-date">
+  <time datetime="2019-02-19T05:31:53.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/166-Fraction-to-Recurring-Decimal/">166 Fraction to Recurring Decimal</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given two integers representing the numerator and denominator of a fraction, return the fraction in string format.</p>
+<p>If the fractional part is repeating, enclose the repeating part in parentheses.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: numerator = 1, denominator = 2</span><br><span class="line">Output: &quot;0.5&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: numerator = 2, denominator = 1</span><br><span class="line">Output: &quot;2&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: numerator = 2, denominator = 3</span><br><span class="line">Output: &quot;0.(6)&quot;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/166-Fraction-to-Recurring-Decimal/" data-id="cjt4bv5y9001wmjmvwwmjb20w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-167-Two-Sum-II-Input-array-is-sorted" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/167-Two-Sum-II-Input-array-is-sorted/" class="article-date">
+  <time datetime="2019-02-19T05:32:25.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/167-Two-Sum-II-Input-array-is-sorted/">167 Two Sum II - Input array is sorted</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given an array of integers that is already <strong>sorted in ascending order</strong>, find two numbers such that they add up to a specific target number.</p>
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Your returned answers (both index1 and index2) are not zero-based.</li>
+<li>You may assume that each input would have <em>exactly</em> one solution and you may not use the <em>same</em>element twice.</li>
+</ul>
+<p><strong>Example:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: numbers = [2,7,11,15], target = 9</span><br><span class="line">Output: [1,2]</span><br><span class="line">Explanation: The sum of 2 and 7 is 9. Therefore index1 = 1, index2 = 2.</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/167-Two-Sum-II-Input-array-is-sorted/" data-id="cjt4bv5y9001xmjmvoga00ve7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-168-Excel-Sheet-Column-Title" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/168-Excel-Sheet-Column-Title/" class="article-date">
+  <time datetime="2019-02-19T05:33:43.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/168-Excel-Sheet-Column-Title/">168 Excel Sheet Column Title</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given a positive integer, return its corresponding column title as appear in an Excel sheet.</p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1 -&gt; A</span><br><span class="line">2 -&gt; B</span><br><span class="line">3 -&gt; C</span><br><span class="line">...</span><br><span class="line">26 -&gt; Z</span><br><span class="line">27 -&gt; AA</span><br><span class="line">28 -&gt; AB </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1</span><br><span class="line">Output: &quot;A&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 28</span><br><span class="line">Output: &quot;AB&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 701</span><br><span class="line">Output: &quot;ZY&quot;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/168-Excel-Sheet-Column-Title/" data-id="cjt4bv5ya001ymjmvwbc0zkp6" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-169-Majority-Element" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/169-Majority-Element/" class="article-date">
+  <time datetime="2019-02-19T05:34:26.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/169-Majority-Element/">169 Majority Element</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given an array of size <em>n</em>, find the majority element. The majority element is the element that appears <strong>more than</strong> <code>⌊ n/2 ⌋</code> times.</p>
+<p>You may assume that the array is non-empty and the majority element always exist in the array.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,2,3]</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,2,1,1,1,2,2]</span><br><span class="line">Output: 2</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/169-Majority-Element/" data-id="cjt4bv5yc001zmjmvyrlase6e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-171-Excel-Sheet-Column-Number" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/171-Excel-Sheet-Column-Number/" class="article-date">
+  <time datetime="2019-02-19T05:35:08.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/171-Excel-Sheet-Column-Number/">171 Excel Sheet Column Number</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
+<p>For example:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A -&gt; 1</span><br><span class="line">B -&gt; 2</span><br><span class="line">C -&gt; 3</span><br><span class="line">...</span><br><span class="line">Z -&gt; 26</span><br><span class="line">AA -&gt; 27</span><br><span class="line">AB -&gt; 28 </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;A&quot;</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;AB&quot;</span><br><span class="line">Output: 28</span><br></pre></td></tr></table></figure>
+<p><strong>Example 3:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;ZY&quot;</span><br><span class="line">Output: 701</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/171-Excel-Sheet-Column-Number/" data-id="cjt4bv5yd0021mjmvgmf6jkyw" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-172-Factorial-Trailing-Zeroes" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/172-Factorial-Trailing-Zeroes/" class="article-date">
+  <time datetime="2019-02-19T07:49:24.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/172-Factorial-Trailing-Zeroes/">172 Factorial Trailing Zeroes</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given an integer <em>n</em>, return the number of trailing zeroes in <em>n</em>!.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output: 0</span><br><span class="line">Explanation: 3! = 6, no trailing zero.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: 5</span><br><span class="line">Output: 1</span><br><span class="line">Explanation: 5! = 120, one trailing zero.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> Your solution should be in logarithmic time complexity.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/172-Factorial-Trailing-Zeroes/" data-id="cjt4bv5ye0022mjmvfsemwu9z" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-173-Binary-Search-Tree-Iterator" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/173-Binary-Search-Tree-Iterator/" class="article-date">
+  <time datetime="2019-02-19T07:50:00.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/173-Binary-Search-Tree-Iterator/">173 Binary Search Tree Iterator</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Implement an iterator over a binary search tree (BST). Your iterator will be initialized with the root node of a BST.</p>
+<p>Calling <code>next()</code> will return the next smallest number in the BST.</p>
+<p><strong>Example:</strong></p>
+<p><strong><img src="https://assets.leetcode.com/uploads/2018/12/25/bst-tree.png" alt="img"></strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">BSTIterator iterator = new BSTIterator(root);</span><br><span class="line">iterator.next();    // return 3</span><br><span class="line">iterator.next();    // return 7</span><br><span class="line">iterator.hasNext(); // return true</span><br><span class="line">iterator.next();    // return 9</span><br><span class="line">iterator.hasNext(); // return true</span><br><span class="line">iterator.next();    // return 15</span><br><span class="line">iterator.hasNext(); // return true</span><br><span class="line">iterator.next();    // return 20</span><br><span class="line">iterator.hasNext(); // return false</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li><code>next()</code> and <code>hasNext()</code> should run in average O(1) time and uses O(<em>h</em>) memory, where <em>h</em> is the height of the tree.</li>
+<li>You may assume that <code>next()</code> call will always be valid, that is, there will be at least a next smallest number in the BST when <code>next()</code> is called.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/173-Binary-Search-Tree-Iterator/" data-id="cjt4bv5yf0023mjmv1hdfvign" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-174-Dungeon-Game" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/174-Dungeon-Game/" class="article-date">
+  <time datetime="2019-02-19T07:51:11.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/174-Dungeon-Game/">174 Dungeon Game</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The demons had captured the princess (<strong>P</strong>) and imprisoned her in the bottom-right corner of a dungeon. The dungeon consists of M x N rooms laid out in a 2D grid. Our valiant knight (<strong>K</strong>) was initially positioned in the top-left room and must fight his way through the dungeon to rescue the princess.</p>
+<p>The knight has an initial health point represented by a positive integer. If at any point his health point drops to 0 or below, he dies immediately.</p>
+<p>Some of the rooms are guarded by demons, so the knight loses health (<em>negative</em> integers) upon entering these rooms; other rooms are either empty (<em>0’s</em>) or contain magic orbs that increase the knight’s health (<em>positive</em> integers).</p>
+<p>In order to reach the princess as quickly as possible, the knight decides to move only rightward or downward in each step.</p>
+<p><strong>Write a function to determine the knight’s minimum initial health so that he is able to rescue the princess.</strong></p>
+<p>For example, given the dungeon below, the initial health of the knight must be at least <strong>7</strong> if he follows the optimal path <code>RIGHT-&gt; RIGHT -&gt; DOWN -&gt; DOWN</code>.</p>
+<table>
+<thead>
+<tr>
+<th>-2 (K)</th>
+<th>-3</th>
+<th>3</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-5</td>
+<td>-10</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10</td>
+<td>30</td>
+<td>-5 (P)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The knight’s health has no upper bound.</li>
+<li>Any room can contain threats or power-ups, even the first room the knight enters and the bottom-right room where the princess is imprisoned.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/174-Dungeon-Game/" data-id="cjt4bv5yg0024mjmvlhvinol0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-230-Kth-Smallest-Element-in-a-BST" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/230-Kth-Smallest-Element-in-a-BST/" class="article-date">
+  <time datetime="2019-02-19T09:05:38.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/230-Kth-Smallest-Element-in-a-BST/">230 Kth Smallest Element in a BST</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Kth-Smallest-Element-in-a-BST"><a href="#Kth-Smallest-Element-in-a-BST" class="headerlink" title="Kth Smallest Element in a BST"></a>Kth Smallest Element in a BST</h2><p>Given a binary search tree, write a function <code>kthSmallest</code> to find the <strong>k</strong>th smallest element in it.</p>
+<p><strong>Note:</strong><br>You may assume k is always valid, 1 ≤ k ≤ BST’s total elements.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,1,4,null,2], k = 1</span><br><span class="line">   3</span><br><span class="line">  / \</span><br><span class="line"> 1   4</span><br><span class="line">  \</span><br><span class="line">   2</span><br><span class="line">Output: 1</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [5,3,6,2,4,null,null,1], k = 3</span><br><span class="line">       5</span><br><span class="line">      / \</span><br><span class="line">     3   6</span><br><span class="line">    / \</span><br><span class="line">   2   4</span><br><span class="line">  /</span><br><span class="line"> 1</span><br><span class="line">Output: 3</span><br></pre></td></tr></table></figure>
+<p><strong>Follow up:</strong><br>What if the BST is modified (insert/delete operations) often and you need to find the kth smallest frequently? How would you optimize the kthSmallest routine?</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/230-Kth-Smallest-Element-in-a-BST/" data-id="cjt4bv5z10031mjmvu79ahd3w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/" class="article-date">
+  <time datetime="2019-02-19T14:33:52.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/">235 Lowest Common Ancestor of a Binary Search Tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Lowest-Common-Ancestor-of-a-Binary-Search-Tree"><a href="#Lowest-Common-Ancestor-of-a-Binary-Search-Tree" class="headerlink" title="Lowest Common Ancestor of a Binary Search Tree"></a>Lowest Common Ancestor of a Binary Search Tree</h2><p>Given a binary search tree (BST), find the lowest common ancestor (LCA) of two given nodes in the BST.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank" rel="noopener">definition of LCA on Wikipedia</a>: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
+<p>Given binary search tree:  root = [6,2,8,0,4,7,9,null,null,3,5]</p>
+<p><img src="/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/binarysearchtree_improved.png" alt="binarysearchtree_improved"></p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8</span><br><span class="line">Output: 6</span><br><span class="line">Explanation: The LCA of nodes 2 and 8 is 6.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: The LCA of nodes 2 and 4 is 2, since a node can be a descendant of itself according to the LCA definition.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>All of the nodes’ values will be unique.</li>
+<li>p and q are different and both values will exist in the BST.</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> leetcode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Vader Wang</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">lowestCommonAncestor</span><span class="params">(TreeNode root, TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.val &gt; p.val &amp;&amp; root.val &gt; q.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> lowestCommonAncestor(root.left, p, q);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (root.val &lt; p.val &amp;&amp; root.val &lt; q.val) &#123;</span><br><span class="line">            <span class="keyword">return</span> lowestCommonAncestor(root.right, p, q);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/235-Lowest-Common-Ancestor-of-a-Binary-Search-Tree/" data-id="cjt4bv5z20032mjmvwwphskfc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-236-Lowest-Common-Ancestor-of-a-Binary-Tree" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/" class="article-date">
+  <time datetime="2019-02-19T15:02:59.000Z" itemprop="datePublished">2019-02-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/">236 Lowest Common Ancestor of a Binary Tree</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="Lowest-Common-Ancestor-of-a-Binary-Tree"><a href="#Lowest-Common-Ancestor-of-a-Binary-Tree" class="headerlink" title="Lowest Common Ancestor of a Binary Tree"></a>Lowest Common Ancestor of a Binary Tree</h2><p>Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.</p>
+<p>According to the <a href="https://en.wikipedia.org/wiki/Lowest_common_ancestor" target="_blank" rel="noopener">definition of LCA on Wikipedia</a>: “The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow <strong>a node to be a descendant of itself</strong>).”</p>
+<p>Given the following binary tree:  root = [3,5,1,6,2,0,8,null,null,7,4]</p>
+<p><img src="/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/binarytree.png" alt="binarytree"> </p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The LCA of nodes 5 and 1 is 3.</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4</span><br><span class="line">Output: 5</span><br><span class="line">Explanation: The LCA of nodes 5 and 4 is 5, since a node can be a descendant of itself according to the LCA definition.</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ul>
+<li>All of the nodes’ values will be unique.</li>
+<li>p and q are different and both values will exist in the binary tree.</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> leetcode;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@author</span> Vader Wang</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">lowestCommonAncestor</span><span class="params">(TreeNode root, TreeNode p, TreeNode q)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span> || root == p || root == q) &#123;</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode left = lowestCommonAncestor(root.left, p, q);</span><br><span class="line">        TreeNode right = lowestCommonAncestor(root.right, p, q);</span><br><span class="line">        <span class="keyword">return</span> left == <span class="keyword">null</span> ? right : right == <span class="keyword">null</span> ? left : root;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/19/236-Lowest-Common-Ancestor-of-a-Binary-Tree/" data-id="cjt4bv5z20033mjmvoazq8nqg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-175-Combine-Two-Tables" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/175-Combine-Two-Tables/" class="article-date">
+  <time datetime="2019-02-20T01:08:33.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/175-Combine-Two-Tables/">175 Combine Two Tables</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Table: <code>Person</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| Column Name | Type    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| FirstName   | varchar |</span><br><span class="line">| LastName    | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">PersonId is the primary key column for this table.</span><br></pre></td></tr></table></figure>
+<p>Table: <code>Address</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| Column Name | Type    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">AddressId is the primary key column for this table.</span><br></pre></td></tr></table></figure>
+<p>Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/175-Combine-Two-Tables/" data-id="cjt4bv5yg0025mjmvn1nluqcq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-176-Second-Highest-Salary" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/176-Second-Highest-Salary/" class="article-date">
+  <time datetime="2019-02-20T01:09:42.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/176-Second-Highest-Salary/">176 Second Highest Salary</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Write a SQL query to get the second highest salary from the <code>Employee</code> table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+----+--------+</span><br><span class="line">| Id | Salary |</span><br><span class="line">+----+--------+</span><br><span class="line">| 1  | 100    |</span><br><span class="line">| 2  | 200    |</span><br><span class="line">| 3  | 300    |</span><br><span class="line">+----+--------+</span><br></pre></td></tr></table></figure>
+<p>For example, given the above Employee table, the query should return <code>200</code> as the second highest salary. If there is no second highest salary, then the query should return <code>null</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------------------+</span><br><span class="line">| SecondHighestSalary |</span><br><span class="line">+---------------------+</span><br><span class="line">| 200                 |</span><br><span class="line">+---------------------+</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/176-Second-Highest-Salary/" data-id="cjt4bv5yh0026mjmv2ftka6i0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-177-Nth-Highest-Salary" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/177-Nth-Highest-Salary/" class="article-date">
+  <time datetime="2019-02-20T01:10:17.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/177-Nth-Highest-Salary/">177 Nth Highest Salary</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Write a SQL query to get the <em>n</em>th highest salary from the <code>Employee</code> table.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+----+--------+</span><br><span class="line">| Id | Salary |</span><br><span class="line">+----+--------+</span><br><span class="line">| 1  | 100    |</span><br><span class="line">| 2  | 200    |</span><br><span class="line">| 3  | 300    |</span><br><span class="line">+----+--------+</span><br></pre></td></tr></table></figure>
+<p>For example, given the above Employee table, the <em>n</em>th highest salary where <em>n</em> = 2 is <code>200</code>. If there is no <em>n</em>th highest salary, then the query should return <code>null</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+------------------------+</span><br><span class="line">| getNthHighestSalary(2) |</span><br><span class="line">+------------------------+</span><br><span class="line">| 200                    |</span><br><span class="line">+------------------------+</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/177-Nth-Highest-Salary/" data-id="cjt4bv5yh0027mjmv62urp2pd" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-178-Rank-Scores" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/178-Rank-Scores/" class="article-date">
+  <time datetime="2019-02-20T01:10:52.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/178-Rank-Scores/">178 Rank Scores</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Write a SQL query to rank scores. If there is a tie between two scores, both should have the same ranking. Note that after a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no “holes” between ranks.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+</span><br><span class="line">| Id | Score |</span><br><span class="line">+----+-------+</span><br><span class="line">| 1  | 3.50  |</span><br><span class="line">| 2  | 3.65  |</span><br><span class="line">| 3  | 4.00  |</span><br><span class="line">| 4  | 3.85  |</span><br><span class="line">| 5  | 4.00  |</span><br><span class="line">| 6  | 3.65  |</span><br><span class="line">+----+-------+</span><br></pre></td></tr></table></figure>
+<p>For example, given the above <code>Scores</code> table, your query should generate the following report (order by highest score):</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">+-------+------+</span><br><span class="line">| Score | Rank |</span><br><span class="line">+-------+------+</span><br><span class="line">| 4.00  | 1    |</span><br><span class="line">| 4.00  | 1    |</span><br><span class="line">| 3.85  | 2    |</span><br><span class="line">| 3.65  | 3    |</span><br><span class="line">| 3.65  | 3    |</span><br><span class="line">| 3.50  | 4    |</span><br><span class="line">+-------+------+</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/178-Rank-Scores/" data-id="cjt4bv5yi0028mjmvpd3b3c16" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-179-Largest-Number" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/179-Largest-Number/" class="article-date">
+  <time datetime="2019-02-20T01:11:32.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/179-Largest-Number/">179 Largest Number</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,2]</span><br><span class="line">Output: &quot;210&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,30,34,5,9]</span><br><span class="line">Output: &quot;9534330&quot;</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong> The result may be very large, so you need to return a string instead of an integer.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/179-Largest-Number/" data-id="cjt4bv5yi0029mjmv7xc01p0j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-180-Consecutive-Numbers" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/180-Consecutive-Numbers/" class="article-date">
+  <time datetime="2019-02-20T02:56:46.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/180-Consecutive-Numbers/">180 Consecutive Numbers</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Write a SQL query to find all numbers that appear at least three times consecutively.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">+----+-----+</span><br><span class="line">| Id | Num |</span><br><span class="line">+----+-----+</span><br><span class="line">| 1  |  1  |</span><br><span class="line">| 2  |  1  |</span><br><span class="line">| 3  |  1  |</span><br><span class="line">| 4  |  2  |</span><br><span class="line">| 5  |  1  |</span><br><span class="line">| 6  |  2  |</span><br><span class="line">| 7  |  2  |</span><br><span class="line">+----+-----+</span><br></pre></td></tr></table></figure>
+<p>For example, given the above <code>Logs</code> table, <code>1</code> is the only number that appears consecutively for at least three times.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+-----------------+</span><br><span class="line">| ConsecutiveNums |</span><br><span class="line">+-----------------+</span><br><span class="line">| 1               |</span><br><span class="line">+-----------------+</span><br></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span></span><br><span class="line">    l1.Num <span class="keyword">AS</span> ConsecutiveNums</span><br><span class="line"><span class="keyword">FROM</span></span><br><span class="line">    <span class="keyword">Logs</span> l1,</span><br><span class="line">    <span class="keyword">Logs</span> l2,</span><br><span class="line">    <span class="keyword">Logs</span> l3</span><br><span class="line"><span class="keyword">WHERE</span></span><br><span class="line">    l1.Id = l2.Id - <span class="number">1</span></span><br><span class="line">    <span class="keyword">AND</span> l2.Id = l3.Id - <span class="number">1</span></span><br><span class="line">    <span class="keyword">AND</span> l1.Num = l2.Num</span><br><span class="line">    <span class="keyword">AND</span> l2.Num = l3.Num;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/180-Consecutive-Numbers/" data-id="cjt4bv5yk002bmjmvcscc7ycl" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-181-Employees-Earning-More-Than-Their-Managers" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/181-Employees-Earning-More-Than-Their-Managers/" class="article-date">
+  <time datetime="2019-02-20T02:58:43.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/181-Employees-Earning-More-Than-Their-Managers/">181 Employees Earning More Than Their Managers</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>The <code>Employee</code> table holds all employees including their managers. Every employee has an Id, and there is also a column for the manager Id.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| Id | Name  | Salary | ManagerId |</span><br><span class="line">+----+-------+--------+-----------+</span><br><span class="line">| 1  | Joe   | 70000  | 3         |</span><br><span class="line">| 2  | Henry | 80000  | 4         |</span><br><span class="line">| 3  | Sam   | 60000  | NULL      |</span><br><span class="line">| 4  | Max   | 90000  | NULL      |</span><br><span class="line">+----+-------+--------+-----------+</span><br></pre></td></tr></table></figure>
+<p>Given the <code>Employee</code> table, write a SQL query that finds out employees who earn more than their managers. For the above table, Joe is the only employee who earns more than his manager.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+----------+</span><br><span class="line">| Employee |</span><br><span class="line">+----------+</span><br><span class="line">| Joe      |</span><br><span class="line">+----------+</span><br></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> a.Name <span class="keyword">as</span> <span class="string">"Employee"</span></span><br><span class="line"><span class="keyword">from</span> Employee <span class="keyword">as</span> a <span class="keyword">join</span> Employee <span class="keyword">as</span> b</span><br><span class="line"><span class="keyword">where</span> a.ManagerId = b.Id <span class="keyword">and</span> a.Salary &gt; b.Salary;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/181-Employees-Earning-More-Than-Their-Managers/" data-id="cjt4bv5yl002cmjmvdjxmox6p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-182-Duplicate-Emails" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/182-Duplicate-Emails/" class="article-date">
+  <time datetime="2019-02-20T03:01:22.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/182-Duplicate-Emails/">182 Duplicate Emails</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Write a SQL query to find all duplicate emails in a table named <code>Person</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">+----+---------+</span><br><span class="line">| Id | Email   |</span><br><span class="line">+----+---------+</span><br><span class="line">| 1  | a@b.com |</span><br><span class="line">| 2  | c@d.com |</span><br><span class="line">| 3  | a@b.com |</span><br><span class="line">+----+---------+</span><br></pre></td></tr></table></figure>
+<p>For example, your query should return the following for the above table:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">+---------+</span><br><span class="line">| Email   |</span><br><span class="line">+---------+</span><br><span class="line">| a@b.com |</span><br><span class="line">+---------+</span><br></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Email</span><br><span class="line"><span class="keyword">from</span> Person</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> Email <span class="keyword">having</span> <span class="keyword">count</span>(Email) &gt; <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/182-Duplicate-Emails/" data-id="cjt4bv5yl002dmjmvv8wrnmiy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-183-Customers-Who-Never-Order" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/02/20/183-Customers-Who-Never-Order/" class="article-date">
+  <time datetime="2019-02-20T03:02:39.000Z" itemprop="datePublished">2019-02-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/LeetCodeTutorial/2019/02/20/183-Customers-Who-Never-Order/">183 Customers Who Never Order</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Suppose that a website contains two tables, the <code>Customers</code> table and the <code>Orders</code> table. Write a SQL query to find all customers who never order anything.</p>
+<p>Table: <code>Customers</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+----+-------+</span><br><span class="line">| Id | Name  |</span><br><span class="line">+----+-------+</span><br><span class="line">| 1  | Joe   |</span><br><span class="line">| 2  | Henry |</span><br><span class="line">| 3  | Sam   |</span><br><span class="line">| 4  | Max   |</span><br><span class="line">+----+-------+</span><br></pre></td></tr></table></figure>
+<p>Table: <code>Orders</code>.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+----+------------+</span><br><span class="line">| Id | CustomerId |</span><br><span class="line">+----+------------+</span><br><span class="line">| 1  | 3          |</span><br><span class="line">| 2  | 1          |</span><br><span class="line">+----+------------+</span><br></pre></td></tr></table></figure>
+<p>Using the above tables as example, return the following:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">+-----------+</span><br><span class="line">| Customers |</span><br><span class="line">+-----------+</span><br><span class="line">| Henry     |</span><br><span class="line">| Max       |</span><br><span class="line">+-----------+</span><br></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">select</span> Customers.Name <span class="keyword">as</span> <span class="string">'Customers'</span></span><br><span class="line"><span class="keyword">from</span> Customers <span class="keyword">where</span> <span class="keyword">Id</span> <span class="keyword">not</span> <span class="keyword">in</span> (</span><br><span class="line">    <span class="keyword">select</span> <span class="keyword">distinct</span> Orders.CustomerId <span class="keyword">from</span> Orders</span><br><span class="line">    );</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/02/20/183-Customers-Who-Never-Order/" data-id="cjt4bv5ym002emjmv4tuo3wrc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/LeetCodeTutorial/page/8/">&laquo; Prev</a><a class="page-number" href="/LeetCodeTutorial/">1</a><span class="space">&hellip;</span><a class="page-number" href="/LeetCodeTutorial/page/7/">7</a><a class="page-number" href="/LeetCodeTutorial/page/8/">8</a><span class="page-number current">9</span><a class="page-number" href="/LeetCodeTutorial/page/10/">10</a><a class="extend next" rel="next" href="/LeetCodeTutorial/page/10/">Next &raquo;</a>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/02/20/198-House-Robber/">198 House Robber</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Vader Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/LeetCodeTutorial/" class="mobile-nav-link">Home</a>
+  
+    <a href="/LeetCodeTutorial/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/LeetCodeTutorial/fancybox/jquery.fancybox.css">
+  <script src="/LeetCodeTutorial/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/LeetCodeTutorial/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
