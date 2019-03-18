@@ -94,7 +94,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/61-Rotate-List/" data-id="cjt9xb8h2004btymvykj8k27f" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/61-Rotate-List/" data-id="cjtdngv8w004beomvvd1yib08" class="article-share-link">Share</a>
       
       
     </footer>
@@ -140,7 +140,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/62-Unique-Paths/" data-id="cjt9xb8h3004dtymvh18zxrm0" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/62-Unique-Paths/" data-id="cjtdngv8x004ceomv6vp7pxkj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -185,7 +185,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/63-Unique-Paths-II/" data-id="cjt9xb8h3004ctymvu4hdwz9c" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/63-Unique-Paths-II/" data-id="cjtdngv8x004deomvayqzwlsk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,14 +217,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Minimum-Path-Sum"><a href="#Minimum-Path-Sum" class="headerlink" title="Minimum Path Sum"></a>Minimum Path Sum</h2><p>Given a <em>m</em> x <em>n</em> grid filled with non-negative numbers, find a path from top left to bottom right which <em>minimizes</em> the sum of all numbers along its path.</p>
+        <h2 id="Minimum-Path-Sum"><a href="#Minimum-Path-Sum" class="headerlink" title="Minimum Path Sum"></a>Minimum Path Sum</h2><p><a href="https://leetcode.com/problems/minimum-path-sum/" target="_blank" rel="noopener">https://leetcode.com/problems/minimum-path-sum/</a></p>
+<p>Given a <em>m</em> x <em>n</em> grid filled with non-negative numbers, find a path from top left to bottom right which <em>minimizes</em> the sum of all numbers along its path.</p>
 <p><strong>Note:</strong> You can only move either down or right at any point in time.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line">  [1,3,1],</span><br><span class="line">  [1,5,1],</span><br><span class="line">  [4,2,1]</span><br><span class="line">]</span><br><span class="line">Output: 7</span><br><span class="line">Explanation: Because the path 1→3→1→1→1 minimizes the sum.</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">minPathSum</span><span class="params">(<span class="keyword">int</span>[][] grid)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> m = grid.length;</span><br><span class="line">        <span class="keyword">int</span> n = grid[<span class="number">0</span>].length;</span><br><span class="line">        <span class="comment">//init</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i ++) &#123;</span><br><span class="line">            grid[i][<span class="number">0</span>] += grid[i - <span class="number">1</span>][<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j ++) &#123;</span><br><span class="line">            grid[<span class="number">0</span>][j] += grid[<span class="number">0</span>][j - <span class="number">1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//dp</span></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; m; i ++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">1</span>; j &lt; n; j ++) &#123;</span><br><span class="line">                grid[i][j] += Math.min(grid[i - <span class="number">1</span>][j], grid[i][j - <span class="number">1</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> grid[m - <span class="number">1</span>][n - <span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/64-Minimum-Path-Sum/" data-id="cjt9xb8h6004htymvxrzc9yyf" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/64-Minimum-Path-Sum/" data-id="cjtdngv8z004heomvmfk2u08o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -271,7 +274,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/65-Valid-Number/" data-id="cjt9xb8h8004ktymvm3vet0rz" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/65-Valid-Number/" data-id="cjtdngv8y004eeomvv39nt1rx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -315,7 +318,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/66-Plus-One/" data-id="cjt9xb8h5004ftymvq8kn4igm" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/66-Plus-One/" data-id="cjtdngv8y004feomvhusgoks0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -356,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/67-Add-Binary/" data-id="cjt9xb8h4004etymv6xmv4l1e" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/67-Add-Binary/" data-id="cjtdngv8z004geomvac97g431" class="article-share-link">Share</a>
       
       
     </footer>
@@ -407,7 +410,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/68-Text-Justification/" data-id="cjt9xb8h5004gtymvma8xr0kl" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/68-Text-Justification/" data-id="cjtdngv90004ieomvi25v9zvh" class="article-share-link">Share</a>
       
       
     </footer>
@@ -451,7 +454,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/69-Sqrt-x/" data-id="cjt9xb8h7004itymvqey4bi9h" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/69-Sqrt-x/" data-id="cjtdngv91004jeomv81p11c5z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -495,7 +498,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/70-Climbing-Stairs/" data-id="cjt9xb8hb004mtymvbukbawun" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/70-Climbing-Stairs/" data-id="cjtdngv92004leomvm65ux8gp" class="article-share-link">Share</a>
       
       
     </footer>
