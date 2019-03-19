@@ -7,19 +7,19 @@
   
   <title>84. Largest Rectangle in Histogram | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each ba">
+  <meta name="description" content="https://leetcode.com/problems/largest-rectangle-in-histogram/ Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle">
 <meta property="og:type" content="article">
 <meta property="og:title" content="84. Largest Rectangle in Histogram">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/18/84-Largest-Rectangle-in-Histogram/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each ba">
+<meta property="og:description" content="https://leetcode.com/problems/largest-rectangle-in-histogram/ Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://assets.leetcode.com/uploads/2018/10/12/histogram.png">
 <meta property="og:image" content="https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png">
-<meta property="og:updated_time" content="2019-02-18T07:59:48.000Z">
+<meta property="og:updated_time" content="2019-03-19T06:11:14.540Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="84. Largest Rectangle in Histogram">
-<meta name="twitter:description" content="Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram. Above is a histogram where width of each ba">
+<meta name="twitter:description" content="https://leetcode.com/problems/largest-rectangle-in-histogram/ Given n non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle">
 <meta name="twitter:image" content="https://assets.leetcode.com/uploads/2018/10/12/histogram.png">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
@@ -89,15 +89,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given <em>n</em> non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
+        <p><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener">https://leetcode.com/problems/largest-rectangle-in-histogram/</a></p>
+<p>Given <em>n</em> non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
 <p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram.png" alt="img"><br>Above is a histogram where width of each bar is 1, given height = <code>[2,1,5,6,2,3]</code>.</p>
 <p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png" alt="img"><br>The largest rectangle is shown in the shaded area, which has area = <code>10</code> unit.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,1,5,6,2,3]</span><br><span class="line">Output: 10</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        stack.push(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= heights.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> h = i == heights.length ? <span class="number">0</span> : heights[i];</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; h &lt; heights[stack.peek()]) &#123;</span><br><span class="line">                <span class="keyword">int</span> height = heights[stack.pop()];</span><br><span class="line">                <span class="keyword">int</span> start = stack.isEmpty() ? -<span class="number">1</span> : stack.peek();</span><br><span class="line">                <span class="keyword">int</span> area = (i - start - <span class="number">1</span>) * height;</span><br><span class="line">                max = Math.max(max, area);</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/84-Largest-Rectangle-in-Histogram/" data-id="cjtf1sqlw0052xfmvit6nnky2" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/84-Largest-Rectangle-in-Histogram/" data-id="cjtfe3q9q0055ermv3d4pe6an" class="article-share-link">Share</a>
       
       
     </footer>

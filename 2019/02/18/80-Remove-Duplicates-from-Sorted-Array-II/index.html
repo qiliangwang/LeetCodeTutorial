@@ -7,17 +7,17 @@
   
   <title>80 Remove Duplicates from Sorted Array II | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do not allocate extra space for another array, you must do this by modif">
+  <meta name="description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do">
 <meta property="og:type" content="article">
 <meta property="og:title" content="80 Remove Duplicates from Sorted Array II">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/18/80-Remove-Duplicates-from-Sorted-Array-II/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do not allocate extra space for another array, you must do this by modif">
+<meta property="og:description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T07:57:14.000Z">
+<meta property="og:updated_time" content="2019-03-19T06:08:01.214Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="80 Remove Duplicates from Sorted Array II">
-<meta name="twitter:description" content="Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do not allocate extra space for another array, you must do this by modif">
+<meta name="twitter:description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/ Given a sorted array nums, remove the duplicates in-place such that duplicates appeared at most twiceand return the new length. Do">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -86,7 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a sorted array <em>nums</em>, remove the duplicates <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank" rel="noopener"><strong>in-place</strong></a> such that duplicates appeared at most <em>twice</em>and return the new length.</p>
+        <p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/</a></p>
+<p>Given a sorted array <em>nums</em>, remove the duplicates <a href="https://en.wikipedia.org/wiki/In-place_algorithm" target="_blank" rel="noopener"><strong>in-place</strong></a> such that duplicates appeared at most <em>twice</em>and return the new length.</p>
 <p>Do not allocate extra space for another array, you must do this by <strong>modifying the input array in-place</strong>with O(1) extra memory.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Given nums = [1,1,1,2,2,3],</span><br><span class="line"></span><br><span class="line">Your function should return length = 5, with the first five elements of nums being 1, 1, 2, 2 and 3 respectively.</span><br><span class="line"></span><br><span class="line">It doesn&apos;t matter what you leave beyond the returned length.</span><br></pre></td></tr></table></figure>
@@ -97,10 +98,12 @@
 <p>Note that the input array is passed in by <strong>reference</strong>, which means modification to the input array will be known to the caller as well.</p>
 <p>Internally you can think of this:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// nums is passed in by reference. (i.e., without making a copy)</span><br><span class="line">int len = removeDuplicates(nums);</span><br><span class="line"></span><br><span class="line">// any modification to nums in your function would be known by the caller.</span><br><span class="line">// using the length returned by your function, it prints the first len elements.</span><br><span class="line">for (int i = 0; i &lt; len; i++) &#123;</span><br><span class="line">    print(nums[i]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">removeDuplicates</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums.length &lt;= <span class="number">2</span>) <span class="keyword">return</span> nums.length;</span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">2</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt; nums.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] != nums[count - <span class="number">2</span>]) &#123;</span><br><span class="line">                nums[count++] = nums[i];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/80-Remove-Duplicates-from-Sorted-Array-II/" data-id="cjtf1sqlu004zxfmvfzmem475" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/80-Remove-Duplicates-from-Sorted-Array-II/" data-id="cjtfe3q9m004xermvtf0nnc9v" class="article-share-link">Share</a>
       
       
     </footer>

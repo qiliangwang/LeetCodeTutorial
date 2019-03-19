@@ -7,17 +7,17 @@
   
   <title>91 Decode Ways | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos; -&amp;gt; 26 Given a non-empty string containi">
+  <meta name="description" content="https://leetcode.com/problems/decode-ways/ A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="91 Decode Ways">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos; -&amp;gt; 26 Given a non-empty string containi">
+<meta property="og:description" content="https://leetcode.com/problems/decode-ways/ A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T08:32:05.000Z">
+<meta property="og:updated_time" content="2019-03-19T06:16:03.502Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="91 Decode Ways">
-<meta name="twitter:description" content="A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos; -&amp;gt; 26 Given a non-empty string containi">
+<meta name="twitter:description" content="https://leetcode.com/problems/decode-ways/ A message containing letters from A-Z is being encoded to numbers using the following mapping: 1234&amp;apos;A&amp;apos; -&amp;gt; 1&amp;apos;B&amp;apos; -&amp;gt; 2...&amp;apos;Z&amp;apos;">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -86,17 +86,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>A message containing letters from <code>A-Z</code> is being encoded to numbers using the following mapping:</p>
+        <p><a href="https://leetcode.com/problems/decode-ways/" target="_blank" rel="noopener">https://leetcode.com/problems/decode-ways/</a></p>
+<p>A message containing letters from <code>A-Z</code> is being encoded to numbers using the following mapping:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&apos;A&apos; -&gt; 1</span><br><span class="line">&apos;B&apos; -&gt; 2</span><br><span class="line">...</span><br><span class="line">&apos;Z&apos; -&gt; 26</span><br></pre></td></tr></table></figure>
 <p>Given a <strong>non-empty</strong> string containing only digits, determine the total number of ways to decode it.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;12&quot;</span><br><span class="line">Output: 2</span><br><span class="line">Explanation: It could be decoded as &quot;AB&quot; (1 2) or &quot;L&quot; (12).</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;226&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: It could be decoded as &quot;BZ&quot; (2 26), &quot;VF&quot; (22 6), or &quot;BBF&quot; (2 2 6).</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numDecodings</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s==<span class="keyword">null</span> ||s.length() == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[s.length() + <span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        dp[<span class="number">1</span>] = s.charAt(<span class="number">0</span>) == <span class="string">'0'</span> ? <span class="number">0</span> : <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= s.length(); i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> one = Integer.valueOf(s.substring(i - <span class="number">1</span>, i));</span><br><span class="line">            <span class="keyword">if</span> (one &gt;= <span class="number">1</span> &amp;&amp; one &lt;= <span class="number">9</span>) &#123;</span><br><span class="line">                dp[i] += dp[i - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">int</span> two = Integer.valueOf(s.substring(i - <span class="number">2</span>, i));</span><br><span class="line">            <span class="keyword">if</span> (two &gt;= <span class="number">10</span> &amp;&amp; two &lt;= <span class="number">26</span>) &#123;</span><br><span class="line">                dp[i] += dp[i - <span class="number">2</span>];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[s.length()];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtf1sqm0005bxfmvwjh3vp7z" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtfe3q9r0059ermv5l6veand" class="article-share-link">Share</a>
       
       
     </footer>

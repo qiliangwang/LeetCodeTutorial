@@ -100,7 +100,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/81-Search-in-Rotated-Sorted-Array-II/" data-id="cjtf1sqlx0054xfmv2iea5h45" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/81-Search-in-Rotated-Sorted-Array-II/" data-id="cjtfe3q9o0050ermv8zod81ft" class="article-share-link">Share</a>
       
       
     </footer>
@@ -132,15 +132,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only <em>distinct</em> numbers from the original list.</p>
+        <p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/remove-duplicates-from-sorted-list-ii/</a></p>
+<p>Given a sorted linked list, delete all nodes that have duplicate numbers, leaving only <em>distinct</em> numbers from the original list.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;2-&gt;3-&gt;3-&gt;4-&gt;4-&gt;5</span><br><span class="line">Output: 1-&gt;2-&gt;5</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;1-&gt;1-&gt;2-&gt;3</span><br><span class="line">Output: 2-&gt;3</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode dummy = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        dummy.next = head;</span><br><span class="line">        ListNode prev = dummy;</span><br><span class="line">        <span class="keyword">while</span> (prev.next != <span class="keyword">null</span> &amp;&amp; prev.next.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (prev.next.val == prev.next.next.val) &#123;</span><br><span class="line">                <span class="keyword">int</span> value = prev.next.val;</span><br><span class="line">                <span class="keyword">while</span> (prev.next != <span class="keyword">null</span> &amp;&amp; prev.next.val == value) &#123;</span><br><span class="line">                    prev.next = prev.next.next;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                prev = prev.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dummy.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/82-Remove-Duplicates-from-Sorted-List-II/" data-id="cjtf1sqlv0050xfmv4uj5l26b" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/82-Remove-Duplicates-from-Sorted-List-II/" data-id="cjtfe3q9o0051ermvbxkwfcfs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -172,15 +175,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>
+        <p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener">https://leetcode.com/problems/remove-duplicates-from-sorted-list/</a></p>
+<p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;1-&gt;2</span><br><span class="line">Output: 1-&gt;2</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;1-&gt;2-&gt;3-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">while</span> (cur.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur.val == cur.next.val) &#123;</span><br><span class="line">                cur.next = cur.next.next;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/83-Remove-Duplicates-from-Sorted-List/" data-id="cjtf1sqlw0051xfmvs7ybhgbk" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/83-Remove-Duplicates-from-Sorted-List/" data-id="cjtfe3q9p0053ermvwgwae8rj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -212,15 +218,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given <em>n</em> non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
+        <p><a href="https://leetcode.com/problems/largest-rectangle-in-histogram/" target="_blank" rel="noopener">https://leetcode.com/problems/largest-rectangle-in-histogram/</a></p>
+<p>Given <em>n</em> non-negative integers representing the histogram’s bar height where the width of each bar is 1, find the area of largest rectangle in the histogram.</p>
 <p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram.png" alt="img"><br>Above is a histogram where width of each bar is 1, given height = <code>[2,1,5,6,2,3]</code>.</p>
 <p><img src="https://assets.leetcode.com/uploads/2018/10/12/histogram_area.png" alt="img"><br>The largest rectangle is shown in the shaded area, which has area = <code>10</code> unit.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [2,1,5,6,2,3]</span><br><span class="line">Output: 10</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        stack.push(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= heights.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> h = i == heights.length ? <span class="number">0</span> : heights[i];</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; h &lt; heights[stack.peek()]) &#123;</span><br><span class="line">                <span class="keyword">int</span> height = heights[stack.pop()];</span><br><span class="line">                <span class="keyword">int</span> start = stack.isEmpty() ? -<span class="number">1</span> : stack.peek();</span><br><span class="line">                <span class="keyword">int</span> area = (i - start - <span class="number">1</span>) * height;</span><br><span class="line">                max = Math.max(max, area);</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/84-Largest-Rectangle-in-Histogram/" data-id="cjtf1sqlw0052xfmvit6nnky2" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/84-Largest-Rectangle-in-Histogram/" data-id="cjtfe3q9q0055ermv3d4pe6an" class="article-share-link">Share</a>
       
       
     </footer>
@@ -252,13 +261,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.</p>
+        <p><a href="https://leetcode.com/problems/maximal-rectangle/" target="_blank" rel="noopener">https://leetcode.com/problems/maximal-rectangle/</a></p>
+<p>Given a 2D binary matrix filled with 0’s and 1’s, find the largest rectangle containing only 1’s and return its area.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">[</span><br><span class="line">  [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;,&quot;0&quot;],</span><br><span class="line">  [&quot;1&quot;,&quot;0&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],</span><br><span class="line">  [&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;,&quot;1&quot;],</span><br><span class="line">  [&quot;1&quot;,&quot;0&quot;,&quot;0&quot;,&quot;1&quot;,&quot;0&quot;]</span><br><span class="line">]</span><br><span class="line">Output: 6</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">maximalRectangle</span><span class="params">(<span class="keyword">char</span>[][] matrix)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (matrix == <span class="keyword">null</span> || matrix.length == <span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> n = matrix[<span class="number">0</span>].length;</span><br><span class="line">        <span class="keyword">int</span>[] heights = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">        heights[n] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; matrix.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; matrix[<span class="number">0</span>].length; j ++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (matrix[i][j] == <span class="string">'0'</span>) &#123;</span><br><span class="line">                    heights[j] = <span class="number">0</span>;</span><br><span class="line">                &#125; <span class="keyword">else</span></span><br><span class="line">                    heights[j] ++;</span><br><span class="line">            &#125;</span><br><span class="line">            max = Math.max(largestRectangleArea(heights), max);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">largestRectangleArea</span><span class="params">(<span class="keyword">int</span>[] heights)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> max = <span class="number">0</span>;</span><br><span class="line">        Stack&lt;Integer&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        stack.push(<span class="number">0</span>);</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; heights.length; i ++) &#123;</span><br><span class="line">            <span class="keyword">int</span> h = heights[i];</span><br><span class="line">            <span class="keyword">while</span> (!stack.isEmpty() &amp;&amp; h &lt; heights[stack.peek()]) &#123;</span><br><span class="line">                <span class="keyword">int</span> height = heights[stack.pop()];</span><br><span class="line">                <span class="keyword">int</span> start = stack.isEmpty() ? -<span class="number">1</span> : stack.peek();</span><br><span class="line">                <span class="keyword">int</span> area = height * (i - <span class="number">1</span> - start);</span><br><span class="line">                max = Math.max(area, max);</span><br><span class="line">            &#125;</span><br><span class="line">            stack.push(i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> max;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/85-Maximal-Rectangle/" data-id="cjtf1sqlx0053xfmvceetzrkl" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/85-Maximal-Rectangle/" data-id="cjtfe3q9p0052ermv7aj8na8w" class="article-share-link">Share</a>
       
       
     </footer>
@@ -297,7 +309,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/86-Partition-List/" data-id="cjtf1sqlx0055xfmv627bfkd7" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/86-Partition-List/" data-id="cjtfe3q9p0054ermvn4eq50uq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -347,7 +359,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/87-Scramble-String/" data-id="cjtf1sqlz005axfmvrdno41wv" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/87-Scramble-String/" data-id="cjtfe3q9q0056ermvav1txpx6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -379,7 +391,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given two sorted integer arrays <em>nums1</em> and <em>nums2</em>, merge <em>nums2</em> into <em>nums1</em> as one sorted array.</p>
+        <p><a href="https://leetcode.com/problems/merge-sorted-array/" target="_blank" rel="noopener">https://leetcode.com/problems/merge-sorted-array/</a></p>
+<p>Given two sorted integer arrays <em>nums1</em> and <em>nums2</em>, merge <em>nums2</em> into <em>nums1</em> as one sorted array.</p>
 <p><strong>Note:</strong></p>
 <ul>
 <li>The number of elements initialized in <em>nums1</em> and <em>nums2</em> are <em>m</em> and <em>n</em> respectively.</li>
@@ -387,10 +400,13 @@
 </ul>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input:</span><br><span class="line">nums1 = [1,2,3,0,0,0], m = 3</span><br><span class="line">nums2 = [2,5,6],       n = 3</span><br><span class="line"></span><br><span class="line">Output: [1,2,2,3,5,6]</span><br></pre></td></tr></table></figure>
+<p>solution</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>[] nums1, <span class="keyword">int</span> m, <span class="keyword">int</span>[] nums2, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> ptr3 = nums1.length-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> ptr1 = m-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> ptr2 = n-<span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(ptr2 &gt;= <span class="number">0</span> &amp;&amp; ptr1 &gt;=<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(nums1[ptr1] &gt; nums2[ptr2])&#123;</span><br><span class="line">                nums1[ptr3] = nums1[ptr1];</span><br><span class="line">                ptr1--;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                nums1[ptr3] = nums2[ptr2];</span><br><span class="line">                ptr2--;</span><br><span class="line">            &#125;</span><br><span class="line">            ptr3--;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(ptr2 &gt;= <span class="number">0</span>)&#123;</span><br><span class="line">            nums1[ptr3--] = nums2[ptr2--];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/88-Merge-Sorted-Array/" data-id="cjtf1sqly0057xfmvxyyt36nv" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/88-Merge-Sorted-Array/" data-id="cjtfe3q9r0057ermv9icfwiz5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -431,7 +447,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/89-Gray-Code/" data-id="cjtf1sqly0056xfmvivgnceal" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/89-Gray-Code/" data-id="cjtfe3q9r0058ermv2s3lz6sa" class="article-share-link">Share</a>
       
       
     </footer>
@@ -470,7 +486,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/90-Subsets-II/" data-id="cjtf1sqlz0059xfmvlrc1np0q" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/90-Subsets-II/" data-id="cjtfe3q9s005bermvde9a98xw" class="article-share-link">Share</a>
       
       
     </footer>

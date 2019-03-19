@@ -7,17 +7,17 @@
   
   <title>83 Remove Duplicates from Sorted List | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Example 2: 12Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2">
+  <meta name="description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-list/ Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-">
 <meta property="og:type" content="article">
 <meta property="og:title" content="83 Remove Duplicates from Sorted List">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/18/83-Remove-Duplicates-from-Sorted-List/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Example 2: 12Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2">
+<meta property="og:description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-list/ Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T07:59:26.000Z">
+<meta property="og:updated_time" content="2019-03-19T06:09:37.755Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="83 Remove Duplicates from Sorted List">
-<meta name="twitter:description" content="Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-&amp;gt;2 Example 2: 12Input: 1-&amp;gt;1-&amp;gt;2-&amp;gt;3-&amp;gt;3Output: 1-&amp;gt;2">
+<meta name="twitter:description" content="https://leetcode.com/problems/remove-duplicates-from-sorted-list/ Given a sorted linked list, delete all duplicates such that each element appear only once. Example 1: 12Input: 1-&amp;gt;1-&amp;gt;2Output: 1-">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -86,15 +86,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>
+        <p><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/" target="_blank" rel="noopener">https://leetcode.com/problems/remove-duplicates-from-sorted-list/</a></p>
+<p>Given a sorted linked list, delete all duplicates such that each element appear only <em>once</em>.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;1-&gt;2</span><br><span class="line">Output: 1-&gt;2</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: 1-&gt;1-&gt;2-&gt;3-&gt;3</span><br><span class="line">Output: 1-&gt;2-&gt;3</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * public class ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     ListNode next;</span></span><br><span class="line"><span class="comment"> *     ListNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">deleteDuplicates</span><span class="params">(ListNode head)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (head == <span class="keyword">null</span> || head.next == <span class="keyword">null</span>) <span class="keyword">return</span> head;</span><br><span class="line">        ListNode cur = head;</span><br><span class="line">        <span class="keyword">while</span> (cur.next != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (cur.val == cur.next.val) &#123;</span><br><span class="line">                cur.next = cur.next.next;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                cur = cur.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/83-Remove-Duplicates-from-Sorted-List/" data-id="cjtf1sqlw0051xfmvs7ybhgbk" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/83-Remove-Duplicates-from-Sorted-List/" data-id="cjtfe3q9p0053ermvwgwae8rj" class="article-share-link">Share</a>
       
       
     </footer>
