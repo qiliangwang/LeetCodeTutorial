@@ -94,7 +94,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtdngv9e0058eomvmuzk50f9" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtf1sqm0005bxfmvwjh3vp7z" class="article-share-link">Share</a>
       
       
     </footer>
@@ -133,7 +133,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/92-Reverse-Linked-List-II/" data-id="cjtdngv9e0059eomvpliey2k7" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/92-Reverse-Linked-List-II/" data-id="cjtf1sqm0005cxfmvt54dxpwp" class="article-share-link">Share</a>
       
       
     </footer>
@@ -171,7 +171,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/93-Restore-IP-Addresses/" data-id="cjtdngv9f005aeomvklde4vlk" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/93-Restore-IP-Addresses/" data-id="cjtf1sqm1005exfmvadmpnjc0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -211,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/94-Binary-Tree-Inorder-Traversal/" data-id="cjtdngv9f005beomvnxvphx4d" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/94-Binary-Tree-Inorder-Traversal/" data-id="cjtf1sqm1005dxfmvjrzma4o2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -249,7 +249,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/95-Unique-Binary-Search-Trees-II/" data-id="cjtdngv9g005ceomvzfddxcz8" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/95-Unique-Binary-Search-Trees-II/" data-id="cjtf1sqm2005fxfmvtgp9ldo1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,13 +281,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given <em>n</em>, how many structurally unique <strong>BST’s</strong> (binary search trees) that store values 1 … <em>n</em>?</p>
+        <p><a href="https://leetcode.com/problems/unique-binary-search-trees/" target="_blank" rel="noopener">https://leetcode.com/problems/unique-binary-search-trees/</a></p>
+<p>Given <em>n</em>, how many structurally unique <strong>BST’s</strong> (binary search trees) that store values 1 … <em>n</em>?</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output: 5</span><br><span class="line">Explanation:</span><br><span class="line">Given n = 3, there are a total of 5 unique BST&apos;s:</span><br><span class="line"></span><br><span class="line">   1         3     3      2      1</span><br><span class="line">    \       /     /      / \      \</span><br><span class="line">     3     2     1      1   3      2</span><br><span class="line">    /     /       \                 \</span><br><span class="line">   2     1         2                 3</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">numTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] dp = <span class="keyword">new</span> <span class="keyword">int</span>[n + <span class="number">1</span>];</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt;= n; i ++) &#123;</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; j &lt; i; j ++) &#123;</span><br><span class="line">                dp[i] += dp[j] * dp[i - <span class="number">1</span> - j];</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/96-Unique-Binary-Search-Trees/" data-id="cjtdngv9h005deomv1zryoxp3" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/96-Unique-Binary-Search-Trees/" data-id="cjtf1sqm3005gxfmvv0xz1jf0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -327,7 +330,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/97-Interleaving-String/" data-id="cjtdngv9h005eeomvui483owd" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/97-Interleaving-String/" data-id="cjtf1sqm5005kxfmv13vv0g7f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -373,7 +376,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/98-Validate-Binary-Search-Tree/" data-id="cjtdngv9i005feomva3dzab4d" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/98-Validate-Binary-Search-Tree/" data-id="cjtf1sqm4005ixfmv6takmz9f" class="article-share-link">Share</a>
       
       
     </footer>
@@ -420,7 +423,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/99-Recover-Binary-Search-Tree/" data-id="cjtdngv9j005geomv0bhskx3w" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/99-Recover-Binary-Search-Tree/" data-id="cjtf1sqm4005hxfmvke02r6xc" class="article-share-link">Share</a>
       
       
     </footer>
@@ -463,7 +466,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/100-Same-Tree/" data-id="cjtdngv650002eomv4n4w7o96" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/100-Same-Tree/" data-id="cjtf1sqih0001xfmvu5xysvo6" class="article-share-link">Share</a>
       
       
     </footer>
@@ -477,7 +480,7 @@
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/LeetCodeTutorial/page/9/">&laquo; Prev</a><a class="page-number" href="/LeetCodeTutorial/">1</a><span class="space">&hellip;</span><a class="page-number" href="/LeetCodeTutorial/page/8/">8</a><a class="page-number" href="/LeetCodeTutorial/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/LeetCodeTutorial/page/11/">11</a><a class="page-number" href="/LeetCodeTutorial/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/LeetCodeTutorial/page/20/">20</a><a class="extend next" rel="next" href="/LeetCodeTutorial/page/11/">Next &raquo;</a>
+    <a class="extend prev" rel="prev" href="/LeetCodeTutorial/page/9/">&laquo; Prev</a><a class="page-number" href="/LeetCodeTutorial/">1</a><span class="space">&hellip;</span><a class="page-number" href="/LeetCodeTutorial/page/8/">8</a><a class="page-number" href="/LeetCodeTutorial/page/9/">9</a><span class="page-number current">10</span><a class="page-number" href="/LeetCodeTutorial/page/11/">11</a><a class="page-number" href="/LeetCodeTutorial/page/12/">12</a><span class="space">&hellip;</span><a class="page-number" href="/LeetCodeTutorial/page/21/">21</a><a class="extend next" rel="next" href="/LeetCodeTutorial/page/11/">Next &raquo;</a>
   </nav>
 
 </section>
@@ -513,19 +516,19 @@
           </li>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/18/337-House-Robber-III/">337. House Robber III</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
       </ul>

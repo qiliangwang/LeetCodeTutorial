@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Table: Person 12345678+-------------+---------+| Column Name | Type    |+-------------+---------+| PersonId    | int     || FirstName   | varchar || LastName    | varchar |+-------------+---------+Per">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T01:09:28.000Z">
+<meta property="og:updated_time" content="2019-03-19T00:33:54.469Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="175 Combine Two Tables">
 <meta name="twitter:description" content="Table: Person 12345678+-------------+---------+| Column Name | Type    |+-------------+---------+| PersonId    | int     || FirstName   | varchar || LastName    | varchar |+-------------+---------+Per">
@@ -92,10 +92,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+-------------+---------+</span><br><span class="line">| Column Name | Type    |</span><br><span class="line">+-------------+---------+</span><br><span class="line">| AddressId   | int     |</span><br><span class="line">| PersonId    | int     |</span><br><span class="line">| City        | varchar |</span><br><span class="line">| State       | varchar |</span><br><span class="line">+-------------+---------+</span><br><span class="line">AddressId is the primary key column for this table.</span><br></pre></td></tr></table></figure>
 <p>Write a SQL query for a report that provides the following information for each person in the Person table, regardless if there is an address for each of those people:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">FirstName, LastName, City, State</span><br></pre></td></tr></table></figure>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Write your MySQL query statement below</span></span><br><span class="line"><span class="keyword">SELECT</span> FirstName, LastName, City, State <span class="keyword">FROM</span> person <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> address <span class="keyword">USING</span>(PersonId)</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/175-Combine-Two-Tables/" data-id="cjtdngv7k0025eomvq65ifrrf" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/175-Combine-Two-Tables/" data-id="cjtf1sqk20027xfmvjuir61ru" class="article-share-link">Share</a>
       
       
     </footer>
@@ -157,19 +159,19 @@
           </li>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/18/337-House-Robber-III/">337. House Robber III</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
       </ul>

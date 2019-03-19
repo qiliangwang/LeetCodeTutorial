@@ -7,17 +7,17 @@
   
   <title>179 Largest Number | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 12Input: [3,30,34,5,9]Output: &amp;quot;9534330&amp;quo">
+  <meta name="description" content="https://leetcode.com/problems/largest-number/ Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 1">
 <meta property="og:type" content="article">
 <meta property="og:title" content="179 Largest Number">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/20/179-Largest-Number/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 12Input: [3,30,34,5,9]Output: &amp;quot;9534330&amp;quo">
+<meta property="og:description" content="https://leetcode.com/problems/largest-number/ Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 1">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-20T01:11:50.000Z">
+<meta property="og:updated_time" content="2019-03-19T00:32:08.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="179 Largest Number">
-<meta name="twitter:description" content="Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 12Input: [3,30,34,5,9]Output: &amp;quot;9534330&amp;quo">
+<meta name="twitter:description" content="https://leetcode.com/problems/largest-number/ Given a list of non negative integers, arrange them such that they form the largest number. Example 1: 12Input: [10,2]Output: &amp;quot;210&amp;quot; Example 2: 1">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -86,17 +86,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
+        <p><a href="https://leetcode.com/problems/largest-number/" target="_blank" rel="noopener">https://leetcode.com/problems/largest-number/</a></p>
+<p>Given a list of non negative integers, arrange them such that they form the largest number.</p>
 <p><strong>Example 1:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [10,2]</span><br><span class="line">Output: &quot;210&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: [3,30,34,5,9]</span><br><span class="line">Output: &quot;9534330&quot;</span><br></pre></td></tr></table></figure>
 <p><strong>Note:</strong> The result may be very large, so you need to return a string instead of an integer.</p>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">largestNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">""</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        String[] res = <span class="keyword">new</span> String[nums.length];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            res[i] = String.valueOf(nums[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        Arrays.sort(res, <span class="keyword">new</span> Comparator&lt;String&gt;()&#123;</span><br><span class="line">            <span class="meta">@Override</span></span><br><span class="line">            <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(String str1, String str2)</span> </span>&#123;</span><br><span class="line">                String s1 = str1 + str2;</span><br><span class="line">                String s2 = str2 + str1;</span><br><span class="line">                <span class="keyword">return</span> s2.compareTo(s1);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">        <span class="keyword">if</span> (res[<span class="number">0</span>].charAt(<span class="number">0</span>) == <span class="string">'0'</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"0"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">for</span> (String s : res) &#123;</span><br><span class="line">            sb.append(s);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/20/179-Largest-Number/" data-id="cjtdngv7n0029eomvkfa2zc1i" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/20/179-Largest-Number/" data-id="cjtf1sqk5002bxfmvj533xt9o" class="article-share-link">Share</a>
       
       
     </footer>
@@ -158,19 +160,19 @@
           </li>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/18/337-House-Robber-III/">337. House Robber III</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
       </ul>

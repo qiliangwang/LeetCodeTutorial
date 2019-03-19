@@ -7,17 +7,17 @@
   
   <title>171 Excel Sheet Column Number | LeetCode</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z -&amp;gt; 26AA -&amp;gt; 27AB -&amp;gt; 28 ... Example 1: 12Input: &amp;q">
+  <meta name="description" content="https://leetcode.com/problems/excel-sheet-column-number/ Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z">
 <meta property="og:type" content="article">
 <meta property="og:title" content="171 Excel Sheet Column Number">
 <meta property="og:url" content="https://vaderwang.github.io/2019/02/19/171-Excel-Sheet-Column-Number/index.html">
 <meta property="og:site_name" content="LeetCode">
-<meta property="og:description" content="Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z -&amp;gt; 26AA -&amp;gt; 27AB -&amp;gt; 28 ... Example 1: 12Input: &amp;q">
+<meta property="og:description" content="https://leetcode.com/problems/excel-sheet-column-number/ Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-19T05:35:52.000Z">
+<meta property="og:updated_time" content="2019-03-19T00:31:17.496Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="171 Excel Sheet Column Number">
-<meta name="twitter:description" content="Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z -&amp;gt; 26AA -&amp;gt; 27AB -&amp;gt; 28 ... Example 1: 12Input: &amp;q">
+<meta name="twitter:description" content="https://leetcode.com/problems/excel-sheet-column-number/ Given a column title as appear in an Excel sheet, return its corresponding column number. For example: 12345678A -&amp;gt; 1B -&amp;gt; 2C -&amp;gt; 3...Z">
   
     <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
   
@@ -86,7 +86,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
+        <p><a href="https://leetcode.com/problems/excel-sheet-column-number/" target="_blank" rel="noopener">https://leetcode.com/problems/excel-sheet-column-number/</a></p>
+<p>Given a column title as appear in an Excel sheet, return its corresponding column number.</p>
 <p>For example:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">A -&gt; 1</span><br><span class="line">B -&gt; 2</span><br><span class="line">C -&gt; 3</span><br><span class="line">...</span><br><span class="line">Z -&gt; 26</span><br><span class="line">AA -&gt; 27</span><br><span class="line">AB -&gt; 28 </span><br><span class="line">...</span><br></pre></td></tr></table></figure>
 <p><strong>Example 1:</strong></p>
@@ -95,10 +96,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;AB&quot;</span><br><span class="line">Output: 28</span><br></pre></td></tr></table></figure>
 <p><strong>Example 3:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: &quot;ZY&quot;</span><br><span class="line">Output: 701</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">titleToNumber</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">char</span> ch : s.toCharArray()) &#123;</span><br><span class="line">            res = res * <span class="number">26</span> + (ch - <span class="string">'A'</span> + <span class="number">1</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/19/171-Excel-Sheet-Column-Number/" data-id="cjtdngv7h0021eomvc6ycey7v" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/19/171-Excel-Sheet-Column-Number/" data-id="cjtf1sqjx0021xfmvgihv9wto" class="article-share-link">Share</a>
       
       
     </footer>
@@ -160,19 +163,19 @@
           </li>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/18/337-House-Robber-III/">337. House Robber III</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/242-Valid-Anagram/">242 Valid Anagram</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/200-Number-of-Islands/">200 Number of Islands</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/20/199-Binary-Tree-Right-Side-View/">199 Binary Tree Right Side View</a>
           </li>
         
       </ul>
