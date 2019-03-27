@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>210. Course Schedule II | LeetCode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="https://leetcode.com/problems/course-schedule-ii/ There are a total of n courses you have to take, labeled from 0 to n-1. Some courses may have prerequisites, for example to take course 0 you have to">
+<meta property="og:type" content="article">
+<meta property="og:title" content="210. Course Schedule II">
+<meta property="og:url" content="https://vaderwang.github.io/2019/03/27/210-Course-Schedule-II/index.html">
+<meta property="og:site_name" content="LeetCode">
+<meta property="og:description" content="https://leetcode.com/problems/course-schedule-ii/ There are a total of n courses you have to take, labeled from 0 to n-1. Some courses may have prerequisites, for example to take course 0 you have to">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-27T03:15:03.559Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="210. Course Schedule II">
+<meta name="twitter:description" content="https://leetcode.com/problems/course-schedule-ii/ There are a total of n courses you have to take, labeled from 0 to n-1. Some courses may have prerequisites, for example to take course 0 you have to">
+  
+    <link rel="alternate" href="/LeetCodeTutorial/atom.xml" title="LeetCode" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/LeetCodeTutorial/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/LeetCodeTutorial/" id="logo">LeetCode</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/">Home</a>
+        
+          <a class="main-nav-link" href="/LeetCodeTutorial/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/LeetCodeTutorial/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://vaderwang.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-210-Course-Schedule-II" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/LeetCodeTutorial/2019/03/27/210-Course-Schedule-II/" class="article-date">
+  <time datetime="2019-03-27T01:46:26.000Z" itemprop="datePublished">2019-03-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      210. Course Schedule II
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://leetcode.com/problems/course-schedule-ii/" target="_blank" rel="noopener">https://leetcode.com/problems/course-schedule-ii/</a></p>
+<p>There are a total of <em>n</em> courses you have to take, labeled from <code>0</code> to <code>n-1</code>.</p>
+<p>Some courses may have prerequisites, for example to take course 0 you have to first take course 1, which is expressed as a pair: <code>[0,1]</code></p>
+<p>Given the total number of courses and a list of prerequisite <strong>pairs</strong>, return the ordering of courses you should take to finish all courses.</p>
+<p>There may be multiple correct orders, you just need to return one of them. If it is impossible to finish all courses, return an empty array.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Input: 2, [[1,0]] </span><br><span class="line">Output: [0,1]</span><br><span class="line">Explanation: There are a total of 2 courses to take. To take course 1 you should have finished   </span><br><span class="line">             course 0. So the correct course order is [0,1] .</span><br></pre></td></tr></table></figure>
+<p><strong>Example 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Input: 4, [[1,0],[2,0],[3,1],[3,2]]</span><br><span class="line">Output: [0,1,2,3] or [0,2,1,3]</span><br><span class="line">Explanation: There are a total of 4 courses to take. To take course 3 you should have finished both     </span><br><span class="line">             courses 1 and 2. Both courses 1 and 2 should be taken after you finished course 0. </span><br><span class="line">             So one correct course order is [0,1,2,3]. Another correct ordering is [0,2,1,3] .</span><br></pre></td></tr></table></figure>
+<p><strong>Note:</strong></p>
+<ol>
+<li>The input prerequisites is a graph represented by <strong>a list of edges</strong>, not adjacency matrices. Read more about <a href="https://www.khanacademy.org/computing/computer-science/algorithms/graph-representation/a/representing-graphs" target="_blank" rel="noopener">how a graph is represented</a>.</li>
+<li>You may assume that there are no duplicate edges in the input prerequisites.</li>
+</ol>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] findOrder(<span class="keyword">int</span> numCourses, <span class="keyword">int</span>[][] prerequisites) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] inDegree = <span class="keyword">new</span> <span class="keyword">int</span>[numCourses];</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[numCourses];</span><br><span class="line">        Map&lt;Integer, List&lt;Integer&gt;&gt; graph = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span>[] prerequisite : prerequisites) &#123;</span><br><span class="line">            inDegree[prerequisite[<span class="number">0</span>]] ++;</span><br><span class="line">            <span class="keyword">if</span> (graph.containsKey(prerequisite[<span class="number">1</span>])) &#123;</span><br><span class="line">                graph.get(prerequisite[<span class="number">1</span>]).add(prerequisite[<span class="number">0</span>]);</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                List&lt;Integer&gt; courses = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">                courses.add(prerequisite[<span class="number">0</span>]);</span><br><span class="line">                graph.put(prerequisite[<span class="number">1</span>], courses);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//get results</span></span><br><span class="line">        <span class="keyword">int</span> first = <span class="number">0</span>, last = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numCourses; i ++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (inDegree[i] == <span class="number">0</span>) res[last++] = i;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (first &lt; last) &#123;</span><br><span class="line">            List&lt;Integer&gt; subCourses = graph.get(res[first]);</span><br><span class="line">            <span class="keyword">if</span> (subCourses != <span class="keyword">null</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (<span class="keyword">int</span> sub : subCourses) &#123;</span><br><span class="line">                    <span class="keyword">if</span> (--inDegree[sub] == <span class="number">0</span>) res[last++] = sub;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            first++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (last != numCourses) <span class="keyword">return</span> <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">0</span>];</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://vaderwang.github.io/2019/03/27/210-Course-Schedule-II/" data-id="cjtqmz45t002zymmv8tv9tcsx" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/LeetCodeTutorial/2019/03/27/213-House-Robber-II/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">213. House Robber II</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/03/">March 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/LeetCodeTutorial/archives/2019/02/">February 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/27/210-Course-Schedule-II/">210. Course Schedule II</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/27/213-House-Robber-II/">213. House Robber II</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/337-House-Robber-III/">337. House Robber III</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 Vader Wang<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/LeetCodeTutorial/" class="mobile-nav-link">Home</a>
+  
+    <a href="/LeetCodeTutorial/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/LeetCodeTutorial/fancybox/jquery.fancybox.css">
+  <script src="/LeetCodeTutorial/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/LeetCodeTutorial/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

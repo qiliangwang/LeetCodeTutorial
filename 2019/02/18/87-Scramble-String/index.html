@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="LeetCode">
 <meta property="og:description" content="Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively. Below is one possible representation of s1 = &amp;quot;great&amp;quot;: 1234567    great   /">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-18T08:29:39.000Z">
+<meta property="og:updated_time" content="2019-03-27T01:39:12.343Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="87 Scramble String">
 <meta name="twitter:description" content="Given a string s1, we may represent it as a binary tree by partitioning it to two non-empty substrings recursively. Below is one possible representation of s1 = &amp;quot;great&amp;quot;: 1234567    great   /">
@@ -101,10 +101,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s1 = &quot;great&quot;, s2 = &quot;rgeat&quot;</span><br><span class="line">Output: true</span><br></pre></td></tr></table></figure>
 <p><strong>Example 2:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Input: s1 = &quot;abcde&quot;, s2 = &quot;caebd&quot;</span><br><span class="line">Output: false</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isScramble</span><span class="params">(String s1, String s2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s1 == <span class="keyword">null</span> || s2 == <span class="keyword">null</span> || s1.length() != s2.length()) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">if</span> (s1.equals(s2)) <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        <span class="comment">// time limit issue</span></span><br><span class="line">        <span class="keyword">char</span>[] s1Char = s1.toCharArray();</span><br><span class="line">        <span class="keyword">char</span>[] s2Char = s2.toCharArray();</span><br><span class="line">        Arrays.sort(s1Char);</span><br><span class="line">        Arrays.sort(s2Char);</span><br><span class="line">        String str1 = <span class="keyword">new</span> String(s1Char);</span><br><span class="line">        String str2 = <span class="keyword">new</span> String(s2Char);</span><br><span class="line">        <span class="keyword">if</span> (!str1.equals(str2)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; s1.length(); i ++) &#123;</span><br><span class="line">            String s1Left = s1.substring(<span class="number">0</span>, i);</span><br><span class="line">            String s1Right = s1.substring(i);</span><br><span class="line">            <span class="keyword">if</span> ((isScramble(s1Left, s2.substring(<span class="number">0</span>, i)) &amp;&amp; isScramble(s1Right, s2.substring(i))) ||</span><br><span class="line">                    (isScramble(s1Left, s2.substring(s2.length() - i))) &amp;&amp; isScramble(s1Right, s2.substring(<span class="number">0</span>, s2.length() - i))) &#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/87-Scramble-String/" data-id="cjtfe3q9q0056ermvav1txpx6" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/87-Scramble-String/" data-id="cjtqmz4730058ymmvc7sm3u2i" class="article-share-link">Share</a>
       
       
     </footer>
@@ -162,6 +164,14 @@
       <ul>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/27/210-Course-Schedule-II/">210. Course Schedule II</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/27/213-House-Robber-II/">213. House Robber II</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
           </li>
         
@@ -171,14 +181,6 @@
         
           <li>
             <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
           </li>
         
       </ul>

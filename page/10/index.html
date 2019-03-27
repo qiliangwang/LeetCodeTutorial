@@ -97,7 +97,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtfe3q9r0059ermv5l6veand" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/91-Decode-Ways/" data-id="cjtqmz476005dymmvhafhmljx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -139,7 +139,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/92-Reverse-Linked-List-II/" data-id="cjtfe3q9t005cermv1ya0iw0k" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/92-Reverse-Linked-List-II/" data-id="cjtqmz477005eymmvlxm9p8ke" class="article-share-link">Share</a>
       
       
     </footer>
@@ -177,7 +177,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/93-Restore-IP-Addresses/" data-id="cjtfe3q9u005dermvw38ytigv" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/93-Restore-IP-Addresses/" data-id="cjtqmz477005fymmvgi6wifym" class="article-share-link">Share</a>
       
       
     </footer>
@@ -219,7 +219,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/94-Binary-Tree-Inorder-Traversal/" data-id="cjtfe3q9u005eermvvc2g0dt6" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/94-Binary-Tree-Inorder-Traversal/" data-id="cjtqmz478005gymmvzyzip1bx" class="article-share-link">Share</a>
       
       
     </footer>
@@ -254,10 +254,12 @@
         <p>Given an integer <em>n</em>, generate all structurally unique <strong>BST’s</strong> (binary search trees) that store values 1 … <em>n</em>.</p>
 <p><strong>Example:</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">Input: 3</span><br><span class="line">Output:</span><br><span class="line">[</span><br><span class="line">  [1,null,3,2],</span><br><span class="line">  [3,2,null,1],</span><br><span class="line">  [3,1,null,null,2],</span><br><span class="line">  [2,1,3],</span><br><span class="line">  [1,null,2,null,3]</span><br><span class="line">]</span><br><span class="line">Explanation:</span><br><span class="line">The above output corresponds to the 5 unique BST&apos;s shown below:</span><br><span class="line"></span><br><span class="line">   1         3     3      2      1</span><br><span class="line">    \       /     /      / \      \</span><br><span class="line">     3     2     1      1   3      2</span><br><span class="line">    /     /       \                 \</span><br><span class="line">   2     1         2                 3</span><br></pre></td></tr></table></figure>
+<h2 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;TreeNode&gt; <span class="title">generateTrees</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> helper(<span class="number">1</span>, n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> List&lt;TreeNode&gt; <span class="title">helper</span><span class="params">(<span class="keyword">int</span> min, <span class="keyword">int</span> max)</span> </span>&#123;</span><br><span class="line">        List&lt;TreeNode&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (min &gt; max) <span class="keyword">return</span> res;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> rt = min; rt &lt;= max; rt ++) &#123;</span><br><span class="line">            List&lt;TreeNode&gt; leftList = helper(min, rt - <span class="number">1</span>);</span><br><span class="line">            List&lt;TreeNode&gt; rightList = helper(rt + <span class="number">1</span>, max);</span><br><span class="line">            <span class="keyword">if</span> (leftList.size() == <span class="number">0</span> &amp;&amp; rightList.size() == <span class="number">0</span>) &#123;</span><br><span class="line">                res.add(<span class="keyword">new</span> TreeNode(rt));</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (leftList.size() == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (TreeNode right : rightList) &#123;</span><br><span class="line">                    TreeNode root = <span class="keyword">new</span> TreeNode(rt);</span><br><span class="line">                    root.right = right;</span><br><span class="line">                    res.add(root);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (rightList.size() == <span class="number">0</span>) &#123;</span><br><span class="line">                <span class="keyword">for</span> (TreeNode left : leftList) &#123;</span><br><span class="line">                    TreeNode root = <span class="keyword">new</span> TreeNode(rt);</span><br><span class="line">                    root.left = left;</span><br><span class="line">                    res.add(root);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="keyword">for</span> (TreeNode left : leftList) &#123;</span><br><span class="line">                    <span class="keyword">for</span> (TreeNode right : rightList) &#123;</span><br><span class="line">                        TreeNode root = <span class="keyword">new</span> TreeNode(rt);</span><br><span class="line">                        root.left = left;</span><br><span class="line">                        root.right = right;</span><br><span class="line">                        res.add(root);</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/95-Unique-Binary-Search-Trees-II/" data-id="cjtfe3q9u005fermv8dcz9khf" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/95-Unique-Binary-Search-Trees-II/" data-id="cjtqmz478005hymmvegre4mca" class="article-share-link">Share</a>
       
       
     </footer>
@@ -298,7 +300,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/96-Unique-Binary-Search-Trees/" data-id="cjtfe3q9v005germvisxhoinp" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/96-Unique-Binary-Search-Trees/" data-id="cjtqmz479005iymmvqx6gswgj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -338,7 +340,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/97-Interleaving-String/" data-id="cjtfe3q9v005hermv3gm1ku4h" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/97-Interleaving-String/" data-id="cjtqmz479005jymmv743i5c63" class="article-share-link">Share</a>
       
       
     </footer>
@@ -384,7 +386,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/98-Validate-Binary-Search-Tree/" data-id="cjtfe3q9w005iermvq0pq72u1" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/98-Validate-Binary-Search-Tree/" data-id="cjtqmz479005kymmvvgsl49ec" class="article-share-link">Share</a>
       
       
     </footer>
@@ -431,7 +433,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/99-Recover-Binary-Search-Tree/" data-id="cjtfe3q9w005jermv3j3iwudk" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/99-Recover-Binary-Search-Tree/" data-id="cjtqmz47a005lymmv327j2ajr" class="article-share-link">Share</a>
       
       
     </footer>
@@ -474,7 +476,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://vaderwang.github.io/2019/02/18/100-Same-Tree/" data-id="cjtfe3q6b0003ermvwb2lfbi4" class="article-share-link">Share</a>
+      <a data-url="https://vaderwang.github.io/2019/02/18/100-Same-Tree/" data-id="cjtqmz43m0002ymmvgl8qc1bt" class="article-share-link">Share</a>
       
       
     </footer>
@@ -520,6 +522,14 @@
       <ul>
         
           <li>
+            <a href="/LeetCodeTutorial/2019/03/27/210-Course-Schedule-II/">210. Course Schedule II</a>
+          </li>
+        
+          <li>
+            <a href="/LeetCodeTutorial/2019/03/27/213-House-Robber-II/">213. House Robber II</a>
+          </li>
+        
+          <li>
             <a href="/LeetCodeTutorial/2019/03/21/hello-world/">Hello World</a>
           </li>
         
@@ -529,14 +539,6 @@
         
           <li>
             <a href="/LeetCodeTutorial/2019/03/18/234-Palindrome-Linked-List/">234. Palindrome Linked List</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/03/18/221-Maximal-Square/">221. Maximal Square</a>
-          </li>
-        
-          <li>
-            <a href="/LeetCodeTutorial/2019/02/21/387-First-Unique-Character-in-a-String/">387 First Unique Character in a String</a>
           </li>
         
       </ul>
